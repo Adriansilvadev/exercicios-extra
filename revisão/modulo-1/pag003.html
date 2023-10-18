@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 3</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <hr>
+    <hr>
+    <h1>Página 3</h1>
+    <hr>
+    <hr>
+    <p>Nesta página vamos inserir mais elementos que são utilizados na criação de paginas web. Vamos criar algumas listas e ver as possibildades de seus usos.</p>
+   
+
+    <h2>Listas</h2>
+
+    <p>Em muitas ocasiões precisaremos incluir listas em nosso site. As listas são uma importante maneira de organizar o conteúdo de uma página web. Basicamente podemos classificar as listas em Ordenadas, não Ordenadas e Listas de Definições. Também podemos criar Listas Mistas, que nada mais é do que uma mistura de listas ordenadas com listas não ordenadas e lista de definição.  </p>
+
+    <p>Para criar listas, usamos as tags <strong> &lt;<abbr title="(List Item)">li</abbr>&gt; ,&lt;<abbr title="(Ordered List)">ol</abbr>&gt; , &lt;<abbr title="Unordered List">ul</abbr>&gt; , &lt;<abbr title="(Description List)">dl</abbr>&gt;,<abbr title="(Definition Term)"> &lt;dt&gt; ,<abbr title=" (Definition Description) "> &lt;dd&gt;</abbr></abbr></strong> </p>
+
+    <p>A seguir exemplificaremos a aplicação desses tipos de lista e veremos qual é o resultado visual na página</p>
+
+
+    <h3>Listas Ordenadas (&lt;ol&gt;)</h3>
+    <ol>
+        <li>Café da manhã</li>
+        <li>Lanche da manhã</li>
+        <li>Almoço</li>
+        <li>Lanche da tarde</li>
+        <li>Jantar</li>
+    </ol>
+    <h3>Listas Não Ordenadas (&lt;ul&gt;)</h3>
+    <ul>
+        <li>Café da manhã</li>
+        <li>Lanche da manhã</li>
+        <li>Almoço</li>
+        <li>Lanche da tarde</li>
+        <li>Jantar</li>
+    </ul>
+    <h3>listas Mistas</h3>
+    <ol>
+        <li>Café da manhã
+            <ul>
+                <li>Café</li>
+                <li>Pão</li>
+                <li>Leite</li>
+                <li>Iogurte</li>
+                <li>frutas</li>
+            </ul>
+        </li>
+        <li>Lanche da manhã
+            <ul type="square">
+                <li>Bolo</li>
+                <li>Suco</li>
+                <li>Fruta</li>
+            </ul>
+        </li>
+        <li>Almoço
+            <ul type="disc">
+            <li>Feijão</li>
+            <li>Arroz</li>
+            <li>Salada</li>
+            <li>Churrasco</li>
+            <li>Cerveja</li>
+        </ul>
+        </li>
+        <li>Lanche da tarde
+            <ul type="none">
+                <li>Biscoito</li>
+                <li>Suco</li>
+                <li>Fruta</li>
+            </ul>
+        </li>
+        <li>Jantar
+            <ul>
+                <li>Inhame</li>
+                <li>Carne</li>
+                <li>Café</li>
+                <li>Leite</li>
+            </ul>
+        </li>
+    </ol>
+    <p>Conforme notamos nos exemplos, podemos muadar o tipo do marcador usando o atributo Type ="circle", "square", "disc" ou "none" (<small>Veja o codigo fonte</small>). vamos fazer mais algumas alteraçõe repetindo os mesmos exemplos.</p>
+    <ul type="square">
+        <li>Café da manhã
+            <ol type="A">
+                <li>Café</li>
+                <li>Pão</li>
+                <li>Leite</li>
+                <li>Iogurte</li>
+                <li>frutas</li>
+            </ol>
+        </li>
+        <li>Lanche da manhã
+            <ol type="a">
+                <li>Bolo</li>
+                <li>Suco</li>
+                <li>Fruta</li>
+            </ol>
+        </li>
+        <li>Almoço
+            <ol type="I">
+            <li>Feijão</li>
+            <li>Arroz</li>
+            <li>Salada</li>
+            <li>Churrasco</li>
+            <li>Cerveja</li>
+        </ol>
+        </li>
+        <li>Lanche da tarde
+            <ol type="i">
+                <li>Biscoito</li>
+                <li>Suco</li>
+                <li>Fruta</li>
+            </ol>
+        </li>
+        <li>Jantar
+            <ol type="1">
+                <li>Inhame</li>
+                <li>Carne</li>
+                <li>Café</li>
+                <li>Leite</li>
+            </ol>
+        </li>
+    </ul>
+<p>Ao criar uma Lista Ordeanada, podemos definir o ponto de partida dos itens alistados.Veja nos exemplos à seguir: </p>
+
+<ul>
+    <li>Café da manhã
+        <ol type="1" start="3">
+            <li>Café</li>
+            <li>Pão</li>
+            <li>Leite</li>
+            <li>Iogurte</li>
+            <li>frutas</li>
+        </ol>
+    </li>
+
+    <p>Começamos no terceiro item.</p>
+
+    <li>Lanche da manhã
+        <ol type="a" start="2">
+            <li>Bolo</li>
+            <li>Suco</li>
+            <li>Fruta</li>
+        </ol>
+    </li>
+    <p>Começamos no segundo item.</p>
+   
+       <h3>Listas de Definições(&lt;dl&gt;)</h3>
+       <p>Como o proprio nome sugere as listas de definições, são uasadas para fazer definições como se fosse um dicionário. Veja os exemplos abaixo. </p>
+       <dl>
+        <dt>HTML</dt>
+        <dd>Hypertext Markup Language (Linguagem de Marcação de Hipertexto)</dd>
+        <dt>CSS</dt>
+        <dd>Cascading Style Sheets (Folhas de Estilo em Cascata")</dd>
+        <dt>DOM</dt>
+        <dd>Document Object Model (Modelo de Objeto de Documento)</dd>
+        <dt>HTTP</dt>
+        <dd>Hypertext Transfer Protocol (Protocolo de Transferência de Hipertexto)</dd>
+        <dt>JS</dt>
+        <dd>JavaScript</dd>
+       </dl>
+</ul>
+<p>Com isso chegamos ao fim desta página! Poderá selecionar as opções abaixo para navegar nas paginas do projeto.</p>
+
+<p>Clique &#x1F449 <a href="pag004.html" target="_self" rel="next">aqui</a>  para acessar a proxima página</p>
+<p>Clique &#x1F449 <a href="pag002.html" target="_self" rel="prev">aqui</a> para acesar a página anterior</p>
+<p>clique &#x1F449 <a href="index.html" target="_self" rel="prev">aqui</a> para acessar a pagina inicial</p>
+</body>
+</html>

@@ -1,0 +1,47 @@
+@charset "UTF-8";
+* {
+
+}
+
+section {
+    background-color:#2B43ED;
+}
+
+article {
+    background-image: linear-gradient(to right, #2B43ED,#2D7BF7,#33A5E1,#2DE6F7,#2BEDC8);
+}
+
+ p#esquerda {
+       background-image: linear-gradient(to left, #2B43ED,#2D7BF7,#33A5E1,#2DE6F7,#2BEDC8);
+}
+p#cima{
+    background-image: linear-gradient(to top, #2B43ED,#2D7BF7,#33A5E1,#2DE6F7,#2BEDC8);
+}
+p#baixo{
+    background-image: linear-gradient(to bottom, #2B43ED,#2D7BF7,#33A5E1,#2DE6F7,#2BEDC8)
+}
+
+div#primeira{
+    width: 100vw;
+    height: 200px;
+    text-align: center;
+    background-image: linear-gradient(25deg,#F9D13C,#F18E53,#F45969,#D32F8E,#9D2AA9);
+}
+div#segunda {
+    width: 100vw;
+    height: 200px;
+    text-align: center;
+    background-image: linear-gradient(to left,#F9D13C,#F18E53,#F45969,#D32F8E,#9D2AA9);
+}
+div#terceira{
+    width: 100vw;
+    height: 200px;
+    text-align: center;
+    background-image: linear-gradient(to bottom,#F9D13C,#F18E53,#F45969,#D32F8E,#9D2AA9);
+}
+div#quarta{
+    width:100vw;
+    height: 200px;
+    text-align: center;
+    background-image: radial-gradient(circle,#F9D13C,#F18E53,#F45969,#D32F8E,#9D2AA9);
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com cores </title>
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="estilos/estilo1.css">
+</head>
+<body>
+    <h1>Bem vindo ao Módulo 2!</h1>
+    <p>Neste módulo passaremos a dar maior atenção aos Estilos CSSs. Essencialmente as CSSs tem o objetivo de tornar a aparência de uma página web, mais agradável e organizada. As várias propriedades que serão consideradas daqui por diante farão nossas paginas serem muitos mais interessantes e atrátivas.</p>
+   <section>
+            <h1>Adicionando cores ao site</h1>
+            <h2>"Background-color"</h2>
+            <p>Dando prosseguimento aos nossos estudos sobre CSS, vamos abordar as vária maneiras em que podemos personalizar nossa página com o uso de cores.Conforme já visto nos exercícios anteriores, podemos acrescentar uma cor de fundo à nossa página. Para isso nós utilizamos a propriedade CSS <strong>Background-color.</strong> </p>
+            <p>Mas podemos personalizar ainda mais a cor de fundo por adicionar duas ou mais cores criando um efeito chamado degradê. Para isso nós utilizamos a propriedade CSS <strong>Background-image</strong>.</p>
+   </section>
+
+      <article>  
+          <h2>"Background-image"</h2>
+          <p>A propriedade <strong>background-image</strong> é usada para adicionar um efeito que chamamos de gradiente ou degradê. É este efeito que está sendo usado neste parágrafo. Para isso definimos a direção do gradiente e as cores que serão usadas.
+          Este é o trecho que usamos para obter este resultado: <br>
+          <strong>background-image: linear-gradient(to right, #2B43ED,#2D7BF7,#33A5E1,#2DE6F7,#2BEDC8);</strong> </p> 
+          <p id="esquerda"> Neste parágrafo aplicamos a mesma propriedade, mas dessa vez mudamos a direção do gradiente, note que as cores escolhidas são mostradas da esquerda para a direita. Aqui está o trecho do código usado: <br>
+            <strong>background-image: linear-gradient(to lef, #2B43ED,#2D7BF7,#33A5E1,#2DE6F7,#2BEDC8);</strong></p> 
+             
+            <p id="cima">Agora veja o mesmo efeito em outra posição.   Aqui está o trecho do código usado: <br>
+
+                <strong>background-image: linear-gradient(to top, #2B43ED,#2D7BF7,#33A5E1,#2DE6F7,#2BEDC8);</strong>
+                <br><br>
+                 </p> 
+             
+             <p id="baixo">Por fim temos o efeito aplicado de cima para baixo. E mais uma vez aqui está o código: <br> <strong>background-image: linear-gradient(to botton, #2B43ED,#2D7BF7,#33A5E1,#2DE6F7,#2BEDC8);</strong><br><br></p>    
+      </article>
+       <p><h2>Extraindo gradiente de imagens</h2>
+        <p>Para nos ajudar na tarefa de criar degradês podemos usar algumas ferramentas onlines. Um exemplo delas é a ferramenta da Adobe. Esta feramenta pode ser acessada neste <a href="https://color.adobe.com/pt/create/image-gradient" target="_blank" rel="external"> <img src="imagens/link.png" alt="">link</a> Nela podemos extrair o gradiente de cores de uma imagem. Isso pode ser util por exemplo, quando precisamos harmonizar os elementos do site com a logo do cliente. Para exemplificar vamos tentar extrair as cores do gradiente da logo do instagram, que pode ser vista abaixo: </p>
+            <img src="imagens/instagram.jpg" alt="logo instagram">
+    
+     <p>Usando a ferramenta extrair gradiente do Adobe Colors, obtemos as seguintes cores representadas pelos codigos hexadecimais: <strong>#F9D13C,#F18E53,#F45969,#D32F8E,#9D2AA9 </strong></p>
+     
+     <p>Veja abaixo estas mesmas cores apresentadas em 3 DIVs, cada uma com uma direção do gradiente.</p>
+
+     <div id="primeira">Gradiente da logo do Instagram com posição <strong>semelhante à original</strong>. Aqui está o código:
+        <pre>
+            <code>
+                div#primeira{
+                    width: 100vw;
+                    height: 200px;
+                    text-align: center;
+                    background-image: linear-gradient(25deg,#F9D13C,#F18E53,#F45969,#D32F8E,#9D2AA9);
+                }   
+            </code>
+        </pre>
+     
+        
+     </div>
+     <br>
+     <div id="segunda">Gradiente da logo do Instagram com posição <strong>da esquerda para a direita</strong>. Aqui está o código:
+        <pre>
+            <code>
+                div#segunda {
+                    width: 100vw;
+                    height: 200px;
+                    text-align: center;
+                    background-image: linear-gradient(to left,#F9D13C,#F18E53,#F45969,#D32F8E,#9D2AA9);
+                } 
+            </code>
+        </pre>
+
+    </div>
+     <br>
+     <div id="terceira">Gradiente da logo do Instagram com posição de <strong>cima para baixo</strong>. Aqui esta  o código:
+        <pre>
+            <code>
+                div#terceira{
+                    width: 30vw;
+                    height: 200px;
+                    text-align: center;
+                    background-image: linear-gradient(to bottom,#F9D13C,#F18E53,#F45969,#D32F8E,#9D2AA9);
+                }
+            </code>
+        </pre>
+     </div>
+     <br>
+     <div id="quarta">Gradiente da logo do Instagram com efeito <strong>circular (radial)</strong>. Aqui está o código: 
+        <pre>
+            <code>
+                div#quarta{
+                width:100vw;
+                height: 200px;
+                text-align: center;
+                background-image: radial-gradient(circle,#F9D13C,#F18E53,#F45969,#D32F8E,#9D2AA9);
+             }
+            </code>
+        </pre>
+   </div>
+
+
+     <a href="../modulo-1/index.html" target="_blank" rel="prev">Voltar para o Módulo 1</a> <br>
+     <a href="pag002.html" target="_self" rel="next">Próxima página</a>
+   
+
+      
+      
+        
+</body>
+</html>

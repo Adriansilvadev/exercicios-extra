@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 2</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    
+</head>
+<body>
+    <hr>
+    <hr>
+    <h1> Bem vindo à pagina 2! <br>Aqui vamos continuar revisando o conhecimento adquirido. </h1>
+    <hr>
+    <hr>
+    <p>Na primeira página revisamos alguns dos principais conceitos de formatação básica usando HTML. Nesta página vamos continuar revisando algumas configurações que envolvem outros elementos básicos de uma página web.</p>
+
+    <p>Vamos comecar com um pequeno elemento que muitas vezes pode passar despercebidos quando acessamos um site. Dê uma olhada no canto  superior esquerdo do seu navegador. Note que há um pequeno ícone que representa a pagina web que você está visitando, o nome deste ìcone é <strong>favicon</strong>, ou <strong>icone de favoritos</strong>. Este é um elemento que é inserido no head do código.Agora vamos prosseguir considerando outros recursos que tornam uma pagina web mais interessante.</p>
+    
+    <h2>Texto formatado</h2>
+    <p>Em algumas situações específicas podemos precisar exibir o testo com uma formatação especial em que seja preciso respeitar caaracteristicas próprias como o espaçamento e recuos de linhas. O exemplo a seguir ilustre bem isso.</p>
+    <pre>
+        <p>// Função para calcular a média de três notas
+            function calcularMedia(nota1, nota2, nota3) {
+              // Somando as três notas
+              var soma = nota1 + nota2 + nota3;
+        
+              // Calculando a média
+              var media = soma / 3;
+        
+              return media; // Retornando o valor da média
+            }
+        
+            // Variáveis para armazenar as notas
+            var nota1 = 7.5;
+            var nota2 = 8.0;
+            var nota3 = 6.5;
+        
+            // Chamando a função para calcular a média e armazenando o resultado
+            var resultadoMedia = calcularMedia(nota1, nota2, nota3);
+        
+            // Exibindo o resultado no console
+            console.log("A média das notas é: " + resultadoMedia);
+            </p>
+    </pre>
+    <p> O resultado acima pode ser obtido com o uso da tag <strong>&lt;pre&gt;</strong></p>
+    <h2> Citação Simples</h2>
+    <p>Ao escrever o conteúdo de uma página pode haver ocasiões em que precisamos  fazer uma citação. Neste casos a citação deve estar entre aspas, embora isso possa ser feito simplesmente por inserir "aspas" no texto, para manter a sementica do HTML5 usamos a tag &lt;q&gt;. o resultado pode ser notado no exemplo a seguir.</p>
+
+    <p>De acordo com o W3C (World Wide Web Consortium), <q>HTML5 é a mais recente revisão da linguagem baseada na web, a plataforma comum para a entrega de conteúdo na internet. </q></p>
+
+    <h2>Citação Composta.</h2>
+    <p>Também pode haver ocasiões em que precisamos fazer citações compostas como pode ser visto no exemplo abaixo.</p>
+    <p><blockquote><q>HTML5, a mais recente revisão da linguagem baseada na web, representa um avanço significativo nas capacidades de criação e entrega de conteúdo, trazendo suporte nativo a elementos multimídia, semântica aprimorada e melhor interoperabilidade, tornando-se um marco crucial no desenvolvimento de aplicações web modernas. -W3C</q></blockquote></p>
+
+    <p>Como pode ser notado, diferente da simples, a citação composta cria um espaço e quebras de linhas no texto. </p>
+    <p>Esse resultado visual pode ser obtido usando a tag <strong>&lt;blockquote&gt;</strong></p>
+
+    <h2>Citação composta com link</h2>
+    <p>Pode ser que além de fazer a citação queriramos informar onde essa citação foi encontrada. O exemplo a seguir vai nos mostrar como isso é possivel.</p>
+
+    <p><blockquote cite="https://chat.openai.com/share/87daa4ce-2370-4e82-9d0e-87a7e4d3a5a6"><q>O HTML5 revolucionou a web ao oferecer uma variedade de recursos avançados e semânticos, possibilitando a criação de experiências interativas e dinâmicas para os usuários. Com seus elementos estruturais e suporte a mídia nativa, o HTML5 abriu caminho para uma internet mais acessível e inclusiva, permitindo que os desenvolvedores construam aplicações modernas que transcendem as fronteiras dos dispositivos. Chat GPT</q></blockquote></p>
+    <p>Por fim, chegamos ao ultimo tópico sobre configurações básicas que iremos considerar, as <strong>abreviações</strong>.</p>
+
+    <h2>Abreviações</h2>
+
+    <p>Com certeza haverá situações em que será necessário usarmos abreviações ou siglas, nestes momentos podemos usar a tag <strong>&lt;abbr&gt;</strong> </p>
+
+    <p>Os exemplos a seguir mostram como essa tag pode ser utilizada.</p>
+    <p>
+        <ul>
+            <li><abbr title="Hypertext Markup Language (Linguagem de Marcação de Hipertexto)">HTML</abbr></li>
+            <li><abbr title="Cascading Style Sheets (Folhas de Estilo em Cascata")>CSS</abbr></li>
+            <li><abbr title="JavaScript">JS</abbr> </li>
+            <li><abbr title="Document Object Model (Modelo de Objeto de Documento)">DOM</abbr></li>
+            <li><abbr title="Hypertext Transfer Protocol (Protocolo de Transferência de Hipertexto)">HTTP</abbr></li>
+        </ul>
+   </p>
+   <p>À primeira vista pode parecer que não ha nada de especial nesta lista de siglas. Mas se você mover o cursor do mouse sobre elas verá que surgirá uma breve explicação sobre cada uma delas.</p>
+
+   <p>Com isso chegamos ao fim da revisão das primeiras configurações basicas de uma pagina web usando  HTML5. Nas paginas seguintes vamos prosseguir ampliando o conhecimento sobre mais elementos que compoem uma página web.</p>
+   
+   <p>Clique &#x1F449; <a href="pag003.html" target="_self" rel="next">aqui</a> para ir para a próxima página. </p>
+   <p>Clique &#x1F449 <a href="index.html" target="_self" rel="prev">aqui</a> para ir para a página anterior.</p>
+
+
+</body>
+</html>

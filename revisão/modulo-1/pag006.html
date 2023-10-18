@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens Dinâmicas, audio e video</title>
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <h1>Imagens Dinâmicas</h1>
+    <p>Com a imensa quantidade e variedade de tamanhos de telas qu existem atualmente, precisamos tornar o nosso conteúdo adaptável. Em programação há varios recursos que tornam isso possível, mas por enquanto vamos usar apenas O HTML para tornar o conteúdo adaptável. Para isso vamos utlizar a tag <strong>&lt;picture&gt;</strong>.</p>
+
+    <p>Abra esta pagina em outros dispositivos ou ajuste o tamanho da janela de seu navagador para perceber como as imagens se ajustam a diferentes tamanhos de tela.</p>
+    
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width:1050px )" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="Imagem flexível">
+    </picture>
+    <p>Vamos usar uma imagem de paisagem para ver se conseguimos o mesmo resultado.</p>
+
+    <picture>
+        <source media="(max-width:750px )" srcset="imagens/Paisagem-p.png" type="image/png">
+        <source media="(max-width:1050px )" srcset="imagens/Paisagem-m.png" type="image/png">
+        <img src="imagens/Paisagem-g.png" alt="">
+    </picture>
+<hr><hr>
+    <h1>Reproduzindo Audio</h1>
+    <p>Vamos ver como podemos inserir audios em uma pagina web usando HTML.</p>
+
+    <audio src="midias/happy-mistake.mp3" controls></audio>
+    
+    <p>No código fonte desta página usamos a tag <strong>&lt;audio&gt;</strong> escolhendo o arquivo através do atributo <strong>src="local/nomedoarquivo.formatodoarquivo</strong>, e adicionamos a propriedade <strong>controls</strong>.Desse modo o player de midia apareceu em nossa pagina.</p>
+
+      <p>Mas pode haver situações em que o navegador não é compatível. Neste casos podemos disponibilizar outros formatos de aruivos como por exemplo <strong>OGG</strong>, <strong>WAV</strong> além de <strong>MP3</strong> que o formato que geralmente utilizamos como padrão. Para isso usamos a tag <strong>&lt;audio&gt;,</strong> porém <mark>removemos o parâmetro <strong> src=" "</strong> e adicionamos a tag &lt;source src="local/nomedoarquivo.formato" type="audio/formatodoarquivo".</mark>></p> 
+      <p>Consulte o código fonte para ver como isso pode ser feito. Abaixo você verá o resultado disso.</p>
+      <audio preload="metadata" controls>
+        <source src="midias/guanacast-33.mp3" type="audio/mpeg">
+        <source src="midias/guanacast-33.ogg" type="audio/ogg">
+        <source src="midias/guanacast-33.wav" type="audio/wav">
+
+        <p>Infelizmente seu navegador não é compatível com este arquivo. Se desejar clique <a href="midias/guanacast-33.mp3" download="">aqui</a> para baixar o arquivo</p>
+      </audio> 
+      <p>Uma observação importante. Evite usar arquivos <strong>WAV</strong> pois este tipo de arquivo torna seu site pesado.</p>
+
+      <hr><hr>
+      <h2>Videos em HTML5 hospedados localmente</h2>
+      <p>Assim como no caso dos áudios, também podemos inserir vídeos em nossa página de varias formas. Mas por enqunto vamos fazer isso usando apenas HTML5</p>
+      <p>Novamente, assim como no caso dos arquivos de áudio, podemos inserir arquivos de vídeo de 2 maneiras. Vejamos como podemos fazer isso.</p>
+
+    <h3>Inserindo vídeos de forma simples</h3>
+    <p>O vídeo abaixo foi inserido de forma simples usando a tag <strong>&lt;video&gt;</strong></p>
+
+    <video src="midias/meu-video.mp4" controls></video>
+
+    <p>Conforme podemos notar, o vídeo foi carregado com uma proporçao muito grande, inclusive gerando uma barra de rolagem lateral. Adicionamos a propriedade <strong>controls </strong> dentro da tag <strong>&lt;video&gt;</strong> para que os botoes de midia pudessem ser visualizados.</p>
+    <p>Vamos fazer alguns ajustes e incluir outras propriedades para que o vídeo seja carregado corretamente </p>
+    <video controls preload="metadata" style="width: 560px;" poster="imagens/limoes-capa.png" loop>
+        <source src="midias/meu-video.mp4" type="video/mp4">
+        <source src="midias/meu-video.m4v" type="video/m4v">
+        <source src="midias/meu-video.ogv" type="video/ogv">
+        <source src="midias/meu-video.webm" type="video/webm">
+        <p>Infelizmente seu navegador não suporta os formatos de vídeo disponiveis. Se desejar poderá fazer o download do vídeo <a href="midias/meu-video.mp4" target="_blank" rel="external">aqui</a>.</p>
+    </video>
+    <p>Dos vários formatos de vídeo usamos os formatos  <strong>MP4, M4V, OGV, WEBM,</strong> deste o webm é o de pior qualidade.</p>
+<p>Conforme pode ser notado acima e também  ao consultar o código fonte, foram feitos alguns ajustes para que o vídeo fosse exibido corretamente.</p>
+<p>Obtemos este resultado usando as seguintes propriedades adicionais: alem de adicionar outros formatos de vídeo para melhorar a compatibilidade dos navagadores usando a tag <strong>&lt; source &gt;</strong>, definimos a largura do vídeo usando a propriedade <strong>style= "width; 500px"</strong>, isso fez o vídeo ficar com uma proporçao menor. além disso usamos a propriedade <strong>"poster"</strong> para adicionar uma capa ao vídeo. A propriedade <strong>loop </strong>também foi adiconada para que o vidéo seja repetido continuamente.</p>
+<p>Neste ponto convem fazer uma observação importante: De modo geral sempre será melhor adicionar vídeos com hospegadem fora do seu servidor, visto que isso pode resultar em alto consumo de banda. A seguir veremos como podemos resolver este problema</p>
+
+<h2>Inserindo vídeo hospedado no Youtube </h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3hng-hmSv2Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<p>O vídeo acima foi inserido de maneira muito simples. Apenas copiamos o link direto do youtube usando a opção incorporar. Neste modo também podemos alterar algumas propriedades como o <strong>widht e height (lagura e altura).</strong></p>
+<p>Também podemos incorporar videos de outros servidores como o<strong> Vímeo</strong> por exemplo. O processo de incorporação é bem semelhante, conforme veremos abaixo.</p>
+<h2>Inserindo vídeo hospedado no Vímeo</h2>
+<iframe src="https://player.vimeo.com/video/11001293?h=31546818b9&color=c9ff23" width="560" height="315" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+<p> É claro que podemos personalizar a exibição usando css por exemplo, mas por enquanto isso é suficiente.</p>
+<p>Na próxima página faremos mais um desafio em que criaremos um conjunto de página com videos.</p>
+
+<p><a href="pag007.html" target="_self" rel="next">Proxima página</a></p>
+<p><a href="pag005.html" target="_self" rel="prev">Página Anterior</a></p>
+<p><a href="index.html" target="_self" rel="prev">Pagina inicial</a></p>
+</body>
+</html>

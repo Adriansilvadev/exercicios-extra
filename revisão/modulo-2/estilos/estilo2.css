@@ -1,0 +1,43 @@
+@charset "UTF-8";
+*{
+
+}
+
+body{
+   
+    background-image: linear-gradient(to right, #A0D9C9,#D8F2EB  );
+}
+main {
+    
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    margin: auto;
+    width: 600px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow:5px 5px 12px #19382f4a ;
+    text-align: justify;
+    text-indent: 10px;
+
+}
+
+h1 {
+    color:#3E8C76;
+    text-align: center;
+    text-shadow: 1px 1px 3px #1c3e356e;
+
+}
+
+h2 {
+    color: #41A689;
+
+}
+
+
+/* Aqui está a paleta de cores utilizada
+#A0D9C9 
+#75BFAA
+#41A689
+#3E8C76
+#D8F2EB
+*/

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes em CSS</title>
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="estilos/estilo3.css">
+    </head>
+<body>
+    
+    <main>
+        <h1>Trabalhando com Fontes.</h1>
+        <p>Conforme já dissemos no inicio desta revisão, de modo geral a maior parte do conteúdo de uma pagina web é composta por informações escritas. E assim como no caso das cores precisamos dar atenção às varias possibilidades que temos para aplicar estilos usando  os varios formatos e possibilidades de fontes disponíveis atualmemte. Vamos considerar 2 famílias de fontes as <strong>'com serifa'</strong> e as <strong>'sem serifa'</strong>. </p>
+
+        <h2>Fontes serifadas</h2>
+
+        <p id="serif">As fontes serifadas tendem a funcionar bem em contextos onde se deseja criar uma sensação de tradição, elegância, autoridade ou formalidade. Elas são frequentemente utilizadas em impressões como livros, revistas, jornais, convites e materiais acadêmicos. Este parágrafo está usando a fonte serifada <strong>'Times New Roman'</strong>. </p>
+
+        <h2>Fontes não serifadas</h2>
+
+        <p id="nserif">Fontes não serifadas tendem a funcionar bem em contextos onde a comunicação precisa ser clara e direta. Elas são frequentemente usadas em materiais como páginas da web, interfaces de aplicativos, cartazes, apresentações e outros elementos de design que requerem uma abordagem moderna e limpa. este parágrafo está usando a fonte não serifada <strong>'Verdana'</strong>. </p>
+
+        <h2>Compatibilidade de fontes</h2>
+        <p>Com tanta variedade de fontes, pode acontecer de alguns dipositivos não serem capazes de reconhcer a fonte que escolhemos usar. Por isso podemos e devemos pensar em soluções visando evitar problemas de compatibilidade. Uma solução simples é definir mais de uma alternativa de fonte usando a propriedade <strong>font-family</strong>. Por exemplo o Visual studio code sugere a seguinte <strong>'safe combination' (Combinação segura)</strong>, para uma fonte sem serifa: <strong>'Arial, Helvetica, sans-serif'</strong>. Essa combinação permite o navegador escolher a fonte que ele melhor se adapta. Podemos encontrar outras <strong>'safe combinations'</strong> <a href="https://www.w3schools.com/cssref/css_websafe_fonts.php" target="_blank" rel="external">neste site</a>. inclusive podemos encontrar safe combinations para fontes <strong>'momoespaçadas' (Monospace).</strong></p>
+        
+        <p>
+            Para simplificar isso e tornar mais facil tornar  o conteúdo escrito adaptável para qualque dispositivo podemos dizer qual á a família de fontes que queremos, dai o navegador decide qual fonte daquela familia usar. Assim podemos simplesmente definir a propriedade font-family das seguintes maneiras: <br>
+            <strong>font-family: sans-serif;</strong> para fontes não <strong>serifadas</strong> ou <br>
+            <strong>font-family: serif;</strong> para fontes c<strong>om serifas</strong> ou ainda, <br>
+            <strong>font-family:monospace;</strong> para fontes <strong>mono espaçadas</strong>.
+        </p>
+
+        <h2>Tamanhos das Fontes</h2>
+        <p>O tamanho da fonte a ser usada em nosso site pode ser definida pela propriedade CSS '<strong>font-size</strong>'. O tamanho da fonte (font-size) pode ser definido básicamente de 2 maneiras. <strong>Por Medidas Absolutas</strong> e <strong>Medidas relativas</strong>.
+         </p>
+
+         <p class="medidas"> <strong>Medidas Absolutas:</strong>
+                <dl>
+                    <dt>cm:</dt>
+                    <dd>Centimetro</dd>
+                    <dt>mm:</dt>
+                    <dd>Milimetro</dd>
+                    <dt>in:</dt>
+                    <dd>Polegada</dd>
+                    <dt>px:</dt>
+                    <dd>Pixel</dd>
+                    <dt>pt:</dt>
+                    <dd>ponto:</dd>
+                    <dt>pc:</dt>
+                    <dd>Paica</dd>
+                </dl>
+         </p>
+
+         <p class="medidas">Medidas relativas</p>
+
+         <dl>
+            <dt>em:</dt>
+            <dd>Medida relativa ao tamanho atual.</dd>
+            <dt>ex:</dt>
+            <dd>Medida relativa à altura X.</dd>
+            <dt>rem</dt>
+            <dd>Medida relativa à fonte principal.</dd>
+            <dt>vw</dt>
+            <dd>Medida relativa à largura da tela.</dd>
+            <dt>vh</dt>
+            <dd>Medida relativa à altura da tela.</dd>
+            <dt>%</dt>
+            <dd>Porcentagem</dd>
+         </dl>
+
+         <p>Apesar de haver varias medidas para determinar o tamanho da fonte a ser utilizada, <mark>a recommendação é que usemos apenas a Medida Absoluta</mark> <strong>'px' (pixel)</strong> e<mark> a Medida Relativa</mark> <strong>'em' (Medida relativa ao tamanho atual)</strong>.  Veja alguns exemplos</p>
+
+         <p id="em">
+           <em>Este parágrafo teve o font-size definida em <strong>1.5em</strong>, o que significa que ela tem uma vez e meia o tamanho natural do texto.</em> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime quibusdam voluptas dolorum quia. Dolorum aperiam, nulla temporibus voluptatibus praesentium odio tempora magni ducimus soluta quasi reiciendis placeat incidunt deserunt eos.
+         </p>
+         
+         <p id="px">
+            <em>Este parágrafo teve o font-size definido como <strong>14px.</strong></em> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi animi quasi autem, molestiae ipsam quam sapiente aliquam beatae non nemo, expedita architecto obcaecati laudantium hic esse consequuntur veritatis voluptates dolor! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque earum saepe officiis voluptatum consequatur necessitatibus odio ex quisquam incidunt velit natus id, libero voluptatibus vero assumenda ipsa sequi iste. Quis.
+         </p>
+
+         <h2>Peso das Fontes</h2>
+         <p>Outra meaneira de personalizar as fontes é alterando seu peso (<strong>font-weight</strong>). Existem basicamente 2 maneiras de laterarmos o peso de uma fonte, isso pode ser feito usando pesos literais, são eles: <strong>lighter,normal, bold, bolder</strong>. Também podemos definir o peso com uma variação numérica, são elas: <strong>100, 200, 300, 400, 500, 600, 700, 800, 900.</strong> Porem é importante entender que nem todas as fontes possuem essas variações de peso.</p>
+         <h2>Estilo das Fontes</h2>
+         <p>Ainda outra maneira de aplicar estilos variados de fonte é usando a propriedade <strong>font-style</strong>: com esta propriedade podemos definir como <strong>Italic ou normal.</strong> </p>
+         <h2 id="dec">Texto Sublinhado</h2>
+         <p>Por fim temos a opção de sublinhar o texto. A propriedade <strong>text-decoration</strong> é a responsável por essa alteração. em todos estes casos é importante lembrar quie nem todas as fontes permitem essas alteraçõe.</p>
+         <h2>Shorthand</h2>
+         <p>Depois de aprender como podemos aplicar estilos às fontes usando todas essas propriedades. podemos lembra que há uma maneira simplificada de aplicar todas essas configurações, isso é possivel graças a uma '<strong>shorthand</strong>' (forma abreviada).
+            shorthand para aplicar estas propriedades fica assim: <br>
+            <strong><em>font-style font-weight font-size 'font-family';</em></strong> <br>
+            font: italic bolder 1.5em 'Arial', sans-serif;
+         </p>
+         <p>Um lembrete imprtante sobre as <Strong>Shothands</Strong> é que podemos diminuir a quantidade de propriedades da shorthand mas precisamos seguir a sequencia.<strong> => estilo => peso => tamanho => familia</strong>. </p>
+
+         <p>Agora que aprendemos a personalizar nossas fontes, passaremos a ver como podemos usar fontes externas e fontes baixadas. Isso será considerado nas proximsa páginas. Use as opções abaixo para nevegar em nosso projeto.</p>
+
+        
+        <a href="pag004.html" target="_self" rel="next">Próxima Página</a><br>
+        <a href="pag002.html" target="_self" rel="prev">Página Anterior</a><br>
+        <a href="pag001.html" target="_self" rel="prev">Página Inicial</a><br>
+        <a href="../modulo-1/index.html" target="_blank" rel="prev">Voltar para o Módulo 1</a>
+    
+         
+    </main>
+    
+    
+</body>
+</html>

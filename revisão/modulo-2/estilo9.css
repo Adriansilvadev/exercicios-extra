@@ -1,0 +1,70 @@
+@charset "UTF-8";
+
+
+
+body {
+    background-color: rgb(163, 224, 204);
+   
+}
+
+main {
+    background-color: aquamarine;
+    margin: 90px;
+    padding: 20px;
+    text-align: justify;
+    text-indent: 15px;
+    border-radius: 12px;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.232);
+}
+
+h1 {
+    text-align: center;
+    color: rgb(7, 134, 134);
+}
+
+span::after {
+    content:'➡️';
+} 
+
+#depois::after {
+    content: '(depois)';
+}
+
+#antes::before {
+    content: '(antes)';
+}
+
+#dp::before {
+    content: '⬅️';
+}
+#fl::first-line {
+    font-size: 2em;
+    color: darkblue;
+    text
+}
+
+#flt::first-letter {
+    font-size: 3em;
+}
+
+::selection {
+    background-color: rgb(40, 141, 96);
+    color: white;
+}
+
+ul li::marker {
+    content: ".";
+    color: red;
+    
+}
+
+ul {
+    font-weight: bolder;
+    color: rgb(10, 117, 10);
+}
+
+a {
+    display: block;
+    text-decoration: none;
+}
+   

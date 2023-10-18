@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'jmh';
+    src: url(fontes/JMH\ Typewriter-Black.otf) format('opentype'), url(fontes/JMH\ Typewriter-Black.ttf) format('truetype'), url(fontes/JMH\ Typewriter-Bold.otf) format('opentype'), url(fontes/JMH\ Typewriter-Bold.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'old';
+    src: url(fontes/oldlondon/OldLondon.ttf) format('truetype'), url(fontes/oldlondon/OldLondonAlternate.ttf) format('truetype'), url(fontes/oldlondon/Olondon_.otf) format('opentype'), url(fontes/oldlondon/Olondona.otf) format('opentype');
+}
+
+
+body {
+    background-color:#C4EEF2;
+ 
+}
+main {
+    background-color: #7ab8bf98;
+    margin: 60px;
+    padding: 10px;
+    text-align: justify;
+    border-radius: 8px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.129);
+}
+
+h1 {
+    color: #A67458;
+    text-align: center;
+    text-shadow: 1px 1px 15px #a6755855;
+}
+
+h2 {
+    color: #2a575c;
+}
+
+p {
+    text-indent: 10px;
+}
+
+a {
+    color: #025159;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+#jmh {
+    font-family: 'jmh' ;
+}
+
+#old {
+    font-family: 'old';
+}

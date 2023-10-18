@@ -1,0 +1,99 @@
+@charset "UTF-8";
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap');
+
+@import url('https://fonts.googleapis.com/css2? family= Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200; 1.300;1.400;1.500;1.600;1.700;1.800;1.900 & display=swap');
+
+body {
+    background-color:#909fa9b9;
+   
+
+}
+
+h1 {
+    text-align: center;
+    color: #6699CC;
+    text-shadow: 1px 1px 4px #17243040;
+}
+
+h2 {
+    color: #6699CC;
+    
+}
+
+a {
+    text-decoration: none;
+    color: #0d884a;
+}
+
+main {
+color: #333333;
+margin: auto;
+padding: 15px;
+margin: 200px;
+text-align: justify;
+text-indent: 15px;
+background-image: linear-gradient(to bottom,#D6EAF8, #B0C4DE,#FFFFFF );
+border-radius: 10px;
+box-shadow: 5px 5px 15px rgba(71, 71, 71, 0.241);
+}
+
+.play {
+font: italic bolder 1.2em 'Player Display',serif;
+    
+    
+
+}
+#poppins {
+background-color: #5e91c546;
+padding: 5px;
+border-radius: 7px;
+font: normal lighter larger 'Poppins', sans-serif;
+box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.142);
+}
+
+#poppins2 {
+    color: #436382;
+    background-color: #25364718;
+    border-radius: 7px;
+    padding: 5px;
+    font: italic 900 small 'Poppins', sans-serif;
+    box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.142);   
+
+}
+
+#poppins3 {
+    background-color: #6b9fd37d;
+    border-radius: 7px;
+    padding: 5px;
+    font: normal bolder larger 'Poppins', sans-serif;
+
+}
+
+#poppins4 {
+    background-color: #5963705f;
+    border-radius: 7px;
+    padding: 5px;
+    font: italic 100 x-small'Poppins', sans-serif;
+}
+
+pre {
+    white-space: break-spaces;
+}
+
+#tilt {
+border-radius: 10px;
+background-color:rgba(43, 98, 238, 0.36);
+color: black;      
+font-family: 'Tilt Prism', cursive; 
+    
+}
+
+.nav {
+    color: #6699CC;
+    display: block;;
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posicionamentos</title>
+    <style>
+        body {
+            background-color: antiquewhite;
+            margin: auto;
+        }
+        main {
+            text-align: justify;
+            text-indent: 25px;
+            background-color: white;
+            border-radius: 20px;
+            min-width: 320px;
+            padding: 30px;
+            margin: 50px ;
+            box-shadow: inset 3px 3px 12px  rgba(0, 0, 0, 0.318);
+            box-sizing:border-box;
+        }
+
+        h1 {
+            text-align: center;
+            color: rgb(147, 79, 19);    
+        }
+
+        h2 {
+            color: rgb(202, 116, 40);
+        }
+        #pad {
+            border: 3px solid  rgb(147, 79, 19);
+            border-radius: 10px;
+            background-image: url(imagens/pattern002.png);
+            height: 300px;
+            width: 80vw;
+            margin: auto;
+        }
+        #pri{
+            background-image: url(imagens/pattern001.png);
+            background-repeat: no-repeat;
+            background-position: lef top;
+            height: 300px;
+            width: 80vw;
+        }
+
+        .pos {
+            border: 3px solid rgb(147, 79, 19);
+            border-radius: 10px;
+            background-image: url(imagens/pattern001.png);
+            background-repeat: no-repeat;
+            height: 300px;
+            width: 80vw;
+            padding: 10px;
+            margin: auto;
+        
+            
+        }
+
+        #seg {   
+            background-position: left center;
+            border-radius: 10px;
+           
+        }
+
+        #ter {
+            background-position: left bottom;
+        }
+
+        #qua {
+            background-position: center top;
+           
+        }
+
+        #qui {
+            background-position: center center;
+        }
+
+        #sex {
+            background-position: center bottom;
+        }
+
+        #set {
+            background-position: right top;
+        }
+        #oit {
+            background-position: right center;
+        }
+
+        #non {
+            background-position: right bottom;
+        }
+
+        
+    </style>
+</head>
+<body>
+   
+    <main>
+        <h1>Posicionamento</h1>
+       <p>Quando trabalhamos com uma imagem com dimensões pequenas podemos usar a  propriedade background-position para definir o local em que ela vai ficar posicionada na página. Lembrando que quando uma imagem de fundo tem dimensões menores do que o elemento, por padrão ela será repetida como podemos ver no exdemplo a seguir: </p>
+       <div id="pad"></div>
+        <p>Conforme já aprendemos, podemos interromper a repetição usando a propriedade background-repeat:no- repeat; Usando esta propriedade podemos definir a posição desejada para o elemento; se <strong>"left top", "left center","lef bottom", "center top", "center center", "center bottom", "right top", "right center"</strong> ou <strong>"right bottom"</strong>. vamos ver como isso fica nos exemplos a seguir </p>
+
+        <h2>"left top"</h2>
+             <div class="pos" id="pri"></div>
+        <h2>"left center"</h2>
+            <div class="pos" id="seg"></div>
+        <h2>"lef bottom"</h2>
+            <div class="pos" id="ter"></div>
+        <h2> "center top"</h2>
+            <div class="pos" id="qua"></div>
+        <h2>"center center"</h2>
+            <div class="pos" id="qui"></div>
+        <h2>"center bottom"</h2>
+            <div class="pos" id="sex"></div>
+        <h2>"right top"</h2>
+            <div class="pos" id="set"></div>
+        <h2>"right center"</h2>
+            <div class="pos" id="oit"></div>
+        <h2>right bottom"</h2>
+            <div class="pos" id="non"></div>
+      
+
+   
+
+    </main>
+</body>
+</html>

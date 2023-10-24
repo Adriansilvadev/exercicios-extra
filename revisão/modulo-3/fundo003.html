@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>backround-position</title>
+
+    <style>
+        body {
+            margin:20px auto;
+        }
+
+        main {
+            background-color: rgba(67, 100, 100, 0.249);
+            width: 1200px;
+            margin:20px;
+            padding: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: justify;
+            text-indent: 25px;
+            font-size: 1.2em;
+            font-weight: normal;
+            border-radius: 20px;
+            box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.271);
+        }
+
+        main h1 {
+            text-align: center;
+            color: rgb(7, 100, 69);
+        }
+
+        main h2 {
+            color: rgb(30, 149, 109);
+
+        }
+        .fundo {
+            height: 180px;
+            width: 600px;
+            border: 2px solid black;
+            border-radius: 15px;
+            background-image: url(imagens/wallpaper003.jpg);
+            background-repeat: no-repeat;
+            margin: 10px;
+        }
+
+        #pos01 {
+            background-position: left top;
+        }
+
+        #pos02 {
+            background-position: left center;
+        }
+
+        #pos03 {
+            background-position:left bottom ;
+        }
+
+        #pos04 {
+            background-position: center top;
+        }
+
+        #pos05 {
+            background-position: center center;
+        }
+
+        #pos06 {
+            background-position: center bottom;
+        }
+
+        #pos07 {
+            background-position: right top;
+        }
+
+        #pos08 {
+            background-position: right center;
+        }
+
+        #pos09 {
+            background-position: right bottom ;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1> Propriedade "Background-position"</h1>
+        <p>Neste exercício abordaremos a propriedade <strong>Background-position</strong> que basicamente define a posicão do fundo do elemento. Para um posicionamento mais preciso podemos usar valores combinados para definir o ponto de encoragem do background. Vejamos nos exemplos a seguir as combinações de valores possiveis para esta propriedade. Usaremos uma imagem de fundo para exemplificar</p>
+        <h2>"left top"</h2>
+            <p> Com esse valor a posicão do background é ancorado no <strong>canto superior esquerdo</strong> da imagem. Esse é o <strong>valor padrão</strong> quando não definimos a posição. </p>
+            <div class="fundo" id="pos01"> </div>
+        <h2>"left center"</h2>
+            <p> Com o valor <strong>left center</strong> a imagem é ancorada no <strong>centro do lado esquerdo</strong> da imagem.</p>
+            <div class="fundo" id="pos02"></div>
+        <h2>"left bottom"</h2>
+            <p> Quando usamos a combinação <strong>left bottom</strong> a ancoragem da imagem fica na <strong>parte debaixo do lado esquerdo</strong> da imagem</p>
+            <div class="fundo" id="pos03"></div>
+        <h2>"center top"</h2>
+            <p>A combinaçào <strong>center top</strong> define a ancoragem para o <strong>centro da parte superior</strong> da imagem</p>
+            <div class="fundo" id="pos04"></div>
+        <h2>"center center"</h2>
+            <p> Essa combinaçào define a ancoragem apartir do <strong>centro</strong> da imagem</p>
+            <div class="fundo" id="pos05"></div>
+        <h2>"center bottom"</h2>
+            <p>A combinação<strong> center bottom</strong> ancora o background no <strong>centro da parte de baixo </strong>da imagem</p>
+            <div class="fundo" id="pos06"></div>
+        <h2>"right top"</h2>
+            <p>Quando usamos <strong>right top</strong> a ancoragem ocorre no <strong>alto do lado direito</strong> da imagem.</p>
+            <div class="fundo" id="pos07"></div>
+        <h2>"right center"</h2>
+            <p><strong>right center</strong> ancora a iamgem no <strong>centro da parte direita </strong>da imagem</p>
+            <div class="fundo" id="pos08"></div>
+        <h2>"right bottom"</h2>
+            <p>A combinação r<strong>ight bottom</strong> deixa a imagem ancorada na <strong>parte de baixo do lado direito</strong>.</p>
+            <div class="fundo" id="pos09"></div>
+    </main>
+
+
+    
+</body>
+</html>

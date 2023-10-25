@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background-size</title>
+    <style>
+        body {
+            height: 100vh;
+           /* background-color:  rgb(23, 7, 75);
+            background-image: url(imagens/wallpaper002.jpg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            background-attachment: fixed; */
+            padding-top:20px;
+            margin-bottom: 20px;
+            background:  rgb(23, 7, 75) url(imagens/wallpaper002.jpg) no-repeat fixed center center  ;
+            background-size: cover;
+           
+        }
+
+        main {
+            background-color: white;
+            max-width: 700px;
+            min-width: 320px;
+            padding: 15px ;
+            margin: auto;
+            border: 2px solid rgb(23, 7, 75);
+            border-radius: 10px;
+            text-indent: 20px;
+            text-align: justify;  
+            font-size: 1.2em; 
+            font-family: Arial, Helvetica, sans-serif;       
+        }
+        .lor {
+            color: rgb(131, 131, 237);
+        }
+
+        h1 {
+            text-align: center;
+            color: rgb(36, 36, 129);
+        }
+
+        h2 {
+            color: darkblue;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Background-size</h1>
+        <p>A propriedade <strong>"background-size"</strong> é usada para definir o tamanho da imagem de fundo. Para melhor exemplificar as propriedades que trabalharemos nesta página vamos adiconar algun lorens.</p>
+
+        <p class="lor">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam facere expedita adipisci eligendi. Accusantium cumque aspernatur modi alias ipsa, quis, assumenda iste voluptatum pariatur, consequuntur sunt placeat labore non quae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam numquam voluptas odit culpa accusamus alias sit, neque enim provident magni at, consequatur nesciunt mollitia laborum. Eveniet quis et cum pariatur?
+        <p class="lor">Veritatis sunt velit commodi, optio vel quisquam. Quia saepe ipsa eius laboriosam natus ducimus perferendis nemo incidunt earum, id consequatur quo, facere consectetur odio cupiditate est atque ipsam molestias numquam!
+        Reprehenderit magni dolor cumque praesentium ipsam repellendus voluptate ea corrupti ipsa sed? Consequatur eveniet accusantium ut ducimus laboriosam nam nisi earum dolor dicta. Est, sit doloribus voluptas necessitatibus aperiam asperiores.</p>
+        <p class="lor">
+            Quibusdam aut nisi itaque minus nemo quod illo porro voluptate quia, deleniti saepe? Facere expedita facilis eum! Repellendus nisi unde sapiente, officia reiciendis, numquam vitae, deserunt illum officiis doloribus suscipit.
+            Molestias minima aspernatur dignissimos dolorum itaque unde illo repellat in ut culpa explicabo, impedit exercitationem voluptate reprehenderit corrupti aperiam rerum corporis et repellendus? Nobis eos, nesciunt dolor aut quibusdam dolorum!
+        </p>
+        <p class="lor">Expedita illo vero veritatis, laborum sit quod sint minima eum libero iure vel repudiandae dicta voluptates accusantium ipsum earum dolores dolor? Laboriosam, voluptatum placeat. Molestias ullam praesentium quos perferendis ducimus!
+        </p>
+        <h2>background-color</h2>
+        <p> Mesmo quando usamos uma imagem de fundo, precisamos definir uma cor de fundo para nossa página. Isso é importante, pois de modo geral, ao carregar uma página o navegador carrega primeiro o texto, para depois carregar o restante do conteudo, por isso ter uma cor de fundo evita que uma página em branco seja carregada quando o servidor estiver mais lento. isso permite que o usuário já consuma o contúdo antes de a página ser totalmente carregada. </p>
+        <h2>background-image</h2>
+        <p>Depois de inserir a cor de fundo podemos inserir a imagem de fundo com a propriedade <strong>"background-image"</strong>.Em seguida definimos a posição da imagem usando a propriédade <strong>"background-position: center center"</strong>. Para evitar repetições usamos a propriedade <strong>"background-repeat: no-repeat"</strong>. A seguir partimos para a propriedade que é o tema desta página, o<strong>"background-size"</strong> .</p>
+
+        <h2>Background-size</h2>
+        <p>Com a propriedade<strong> background-size</strong> definimos o tamanho da imagem de fundo. Por padrão esta propriedade é definida como <strong>"auto"</strong>  Mas,podemos alterar  tamanho do background de 3 maneiras: <br> <strong>"background-size": 100%  100%;</strong>-> preenche a tela, mas achata e distorce a imagem. <br> <strong>"background-size":contain;</strong> -> a imagem é 100% exibida,mas isso pode resultar em laterais ou verticais vazias. <br>
+        <strong>"background-size":cover</strong>; -> cobre a tela toda mesmo que tenha que cortar a imagem. No nosso exemplo essa foi a melhor opção, por isso foi essa propriedade que utilizamos. Mas a escolha depende das necessidades do projeto.</p>
+
+        <h2>background-attachment</h2>
+        <p>A propriedade<strong> "background-attachment"</strong> define o vnculo que o fundo terá com o conteudo. o Valor padrõa é <strong>"scroll" </strong>que significa que o fundo vai rolara junto com o conteudo. Mas também podemos definir como <strong>"fixed"</strong>, que faz o fundo ficar fixo. Esta foi a opção que usamos nesta página.</p>
+
+        <h2> min-width e max-widht</h2>
+        <p>Para concluir o ajuste do tamnho da imagem definimos o max-widht e min-width. desse modo o background se ajustárá ao tamanho da tela de acordo como o dispositivo.</p>
+        <h2>Shorthand background</h2>
+        <p>Conforme pode ser visto no código fonte desta página, usamos varias vezes a propriedade background. podemos resumir em uma unica declaracáo com a seguinte ordem: <br>
+            <strong>Cor de fundo >> Imagem de fundo >> Repetição de imagem >> Fixação de fundo >>Posição de fundo >> Tamanho de fundo </strong>. <br> Ou seja: <strong>color >> url(imagem/...) >> repeat >> attachment >> position >> size.</strong> </p>  <p>Porém no momento da craição deste exercício precisamos colocar a propriedade background-size fora da shorthand, visto que a presenca dela ocasiobanava a remoção da imagem de fundo. </p>
+
+    </main>
+    
+</body>
+</html>

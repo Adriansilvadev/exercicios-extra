@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alinhamento vertical</title>
+
+    <style>
+        body {
+            background-color: rgb(63, 209, 242);
+         
+        }
+        main {
+            height: 100%;
+            width: 60vw;
+            margin: auto;
+            background-color: white;
+            padding: 30px 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.2em;
+            text-align: justify;
+            text-indent: 30px;
+            border-radius: 20px;
+            box-shadow: inset 1px 1px 15px 1px  rgba(0, 0, 0, 0.435);
+        }
+
+        h1 {
+            text-align: center;
+            color: rgb(27, 87, 171);
+        }
+
+        #ext {
+            background-color: blue;
+            background-image: url(imagens/target001.png);
+            background-size: 100% 100%;
+            height: 500px;
+            padding: 10px;
+            position: relative;
+        }
+         
+        #int {
+            background-image: url(imagens/target001.png);
+            background-size: 100% 100%;
+            background-color: yellow;
+            height: 200px;
+            width: 400px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+       
+    </style>
+</head>
+<body>
+    <main>
+    <h1> Alinhamento Vertical </h1>
+    <p>Quando queremos alinhar um elemento horizontalmente, podemos simplesmente definir a propriedade <strong>"margin" </strong>com o valor <strong>"auto"</strong>. Porém quando precisamos alinhar verticalmente precisamos seguir algumas regras que destacaremos a seguir. </p>
+    <p>Para fazer o alinhamento vertical de um elemento precisamos ter um <strong>"container"</strong> e um <strong>"conteúdo"</strong>, que em nosso exemplos identificanos com as ids <strong>"ext"</strong> e <strong>"int"</strong>. Para este exemplo definimos o elemento <strong>"ext"</strong>  com um height (altura) de 500px , e o elemento <strong>"int"</strong> com height (Altura) de 200px.  </p>
+
+    <p>O proximo passo é definir o elemento <strong>"container"</strong> com o<strong> "position: relative"</strong>(de modo geral isso é desnecessários pois por padrão o posicionamento de um box é realativo mas seremos explicito neste exemplo) e o elemento <strong>"conteudo"</strong> como <strong>"position: absolute"</strong>. Quando um elemento passa a ter um position com o valor absolute, podemos definir sua posição usando as propriedades <strong>top, bottom, left e right </strong>. Neste exemplo usamos o left e top usando valore em porcentagem. Em seguida usamos a propriedade transform: translate() com os parametros -50% , -50% conseguimos centralizar verticalmente o elemento conteudo do exemplo abaixo.</p>
+
+  <section id="ext">
+      
+        <article id="int">
+        </article>
+  </section>
+
+    </main>
+
+    
+
+    
+</body>
+</html>

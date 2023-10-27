@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+  <link rel="stylesheet" href="estilos/style.css">
+</head>
+<body>
+    <header>
+        <h1>Trabalhando com tabelas</h1>
+    </header>
+
+    <main>
+        
+        <section>
+            <p>As tabelas costumavam ser uma ferramenta popular para o layout de páginas da web, mas ao longo do tempo, o uso de tabelas para esse fim foi substituído por abordagens mais modernas e flexíveis, como o uso de CSS e layouts responsivos. No entanto, as tabelas ainda têm um papel importante no desenvolvimento de páginas da web, principalmente para a exibição de dados tabulares, como calendários, agendas, dados de preços, dados de produtos e resultados de pesquisas.</p>
+        </section>
+        <section >
+            <table id="tb1">
+                <caption id="pri"> Modelo de Tabela Simples</caption>
+                <tr>
+                    <td class="pri">A1</td>
+                    <td class="pri">A2</td>
+                    <td class="pri">A3</td>
+                    <td class="pri">A4</td>
+                    <td class="pri">A5</td>
+                </tr>
+                 
+                <tr>   
+                 <td class="pri">B1</td>
+                 <td class="pri">B2</td>
+                 <td class="pri">B3</td>
+                 <td class="pri">B4</td>
+                 <td class="pri">B5</td>
+                    </tr>
+                 
+                 <tr>   
+                 <td class="pri">C1</td>
+                 <td class="pri">C2</td>
+                 <td class="pri">C3</td>
+                 <td class="pri">C4</td>
+                 <td class="pri">C5</td>
+                </tr>
+                 
+                 <tr>   
+                 <td class="pri">D1</td>
+                 <td class="pri">D2</td>
+                 <td class="pri">D3</td>
+                 <td class="pri">D4</td>
+                 <td class="pri">D5</td>
+                </tr>
+                 
+                 <tr>   
+                 <td class="pri">E1</td>
+                 <td class="pri">E2</td>
+                 <td class="pri">E3</td>
+                 <td class="pri">E4</td>
+                 <td class="pri">E5</td>
+                </tr>
+            </table>
+        </section>
+
+        <section style="margin-bottom: -80px;">
+            <h2>Elementos de tabela</h2>
+           <p>Uma tabela em HTML consiste em vários elementos que ajudam a estruturar e organizar os dados dentro da tabela. Aqui estão os principais elementos que compõem a estrutura de uma tabela em HTML:
+
+            <p><strong>&lt;table>:</strong> Este é o elemento principal que define a estrutura da tabela em si.</p> 
+            
+            <p><strong>&lt;tr>:</strong> Este elemento representa uma linha na tabela e contém as células da tabela.</p> 
+            
+           <p> <strong>&lt;th></strong> e <strong>&lt;td>:</strong> Estes são elementos de célula da tabela. O elemento <strong>&lt;th></strong> é usado para os cabeçalhos da tabela, enquanto o elemento <strong>&lt;td></strong> é usado para o restante do conteúdo da tabela. </p>
+            
+             <p> <strong>&lt;thead>, &lt;tbody></strong> e<strong> &lt;tfoot>:</strong> O elemento<strong> &lt;thead> </strong>é usado para agrupar os cabeçalhos da tabela,<strong> &lt;tbody> </strong>é usado para agrupar o corpo principal da tabela e <strong>&lt;tfoot></strong> é usado para agrupar o rodapé da tabela.</p>
+
+            <h2>Hierarquia de tabelas</h2>
+            <p>a hierarquia dos elementos de tabela é fundamental para entender como eles se relacionam e como a estrutura da tabela é organizada em HTML. Aqui está a hierarquia dos elementos de tabela:
+
+        <p><strong>table (Tabela):</strong> Este é o elemento de nível mais alto que define a tabela em si.</p>
+        
+        <strong>thead, tbody, e tfoot (Cabeçalho, Corpo e Rodapé da Tabela):</strong> Esses elementos podem ser usados para dividir a tabela em seções distintas, dependendo do conteúdo e do propósito. O <strong>thead</strong> é usado para conter os cabeçalhos da tabela, o <strong>tbody</strong> para o conteúdo principal e o <strong>tfoot</strong> para o rodapé da tabela.
+        
+        <p><strong>tr (Linha da Tabela):</strong> Este elemento representa uma linha na tabela e é usado para agrupar células de tabela.</p>
+        
+        <p><strong>th (Cabeçalho da Tabela):</strong> Este elemento é usado para definir os cabeçalhos das colunas ou linhas da tabela. Normalmente, é usado dentro do elemento <strong>thead</strong>.</p>
+        
+        <p> <strong>td (Célula da Tabela):</strong> Este elemento é usado para definir células regulares de dados na tabela. É usado dentro dos elementos <strong>tbody</strong> e <strong>tfoot</strong>.
+        </p>
+
+        <h2>Personalização de tabelas</h2>
+        <p>Conforme vimos até aqui, a tabela é uma composicão de vários elemnetos HTML, assim para estilizar uma tabela podemos seletar o elementol desejado e fazer os ajustes de bordas, cor altura largura background etc, através da folha de estilos.</p>
+
+        <p>Uma propriedade que merece destaque é a propriedade <strong>border-collapse</strong> que usamos para unir  ou separar os elementos da tabela. Veja nos exemplos abaixo como essa propriedade atua:
+         </p>
+         <table id="tb2">
+            <caption id="seg"> border-collapse: separate;</caption>
+            <tr>
+                <td class="seg">A1</td>
+                <td class="seg">A2</td>
+                <td class="seg">A3</td>
+            </tr>
+            <tr>
+                <td class="seg">B1</td>
+                <td class="seg">B2</td>
+                <td class="seg">B3</td>
+            </tr>
+            <tr>
+                <td class="seg">C1</td>
+                <td class="seg">C2</td>
+                <td class="seg">C3</td>
+            </tr>
+         </table>
+
+         <table id="tb3">
+            <caption id="ter"> border-collapse: collapse;</caption>
+            <tr>
+                <td class="ter">A1</td>
+                <td class="ter">A2</td>
+                <td class="ter">A3</td>
+            </tr>
+            <tr>
+                <td class="ter">B1</td>
+                <td class="ter">B2</td>
+                <td class="ter">B3</td>
+            </tr>
+            <tr>
+                <td class="ter">C1</td>
+                <td class="ter">C2</td>
+                <td class="ter">C3</td>
+            </tr>
+         </table>
+        </section>
+
+        <section>
+            <h2>Tabelas Semânticas </h2>
+            <p>
+                A introdução da semântica no HTML5 trouxe consigo uma abordagem mais estruturada e significativa no desenvolvimento de páginas da web. No contexto das tabelas, a semântica oferece a capacidade de atribuir significado e contexto específicos para os diferentes elementos de tabela, resultando em um código HTML mais legível e compreensível tanto para os desenvolvedores quanto para os motores de busca.
+            </p>
+
+            <p>Um dos benefícios da semântica no HTML5 é que os navegadores modernos conseguem interpretar e renderizar elementos semanticamente corretos mesmo que estejam em uma posição diferente no código. Isso significa que elementos como <strong>header, footer, article, section,</strong> entre outros, serão interpretados da maneira correta, mesmo se estiverem fora de ordem.</p>
+        
+            <h3>Uma observação importante</h3>
+            <p>
+                De acordo com a W3C: os fechamentos das tags <strong>tr</strong> e <strong>td</strong> não são obrigatórios, porém recomendados;
+                    - Se a hierarquia não for respeitada, os elementos vão aparecer antes ou depois da tabela. 
+            </p>
+        </section>
+        
+
+
+    </main>
+
+    <footer>
+
+    </footer>
+    
+</body>
+</html>

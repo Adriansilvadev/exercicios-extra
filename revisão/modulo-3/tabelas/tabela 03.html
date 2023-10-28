@@ -15,7 +15,7 @@
     <main>
 
        <section>
-           <p>Nesta página criamos uma tabela um pouco maior, nela conseguimos usar os princiapis elementos presente em uma tabela semântica. Um aspecto importante na criação de tabelas semânticas é o uso de escopos nos cabeçalhos. O  uso do atributo <strong>scope</strong> em uma tabela HTML é uma indicação do propósito de uma célula de cabeçalho. Isso ajuda a identificar se a célula do cabeçalho se refere a uma <strong>linha, coluna, grupo de linhas ou grupo de colunas</strong>. O escopo pode ser aplicado aos elementos <strong>th</strong> (cabeçalho de tabela) em HTML.
+           <p>Nesta página criamos uma tabela um pouco maior que a da página anterior. nela conseguimos usar os princiapis elementos presente em uma tabela semântica. Um aspecto importante na criação de tabelas semânticas é o uso de escopos nos cabeçalhos. O  uso do atributo <strong>scope</strong> em uma tabela HTML é uma indicação do propósito de uma célula de cabeçalho. Isso ajuda a identificar se a célula do cabeçalho se refere a uma <strong>linha, coluna, grupo de linhas ou grupo de colunas</strong>. O escopo pode ser aplicado aos elementos <strong>th</strong> (cabeçalho de tabela) em HTML.
              </p>
              <p>
                 Existem quatro valores possíveis para o atributo scope em uma célula de cabeçalho <strong>(th)</strong>: <br>
@@ -154,7 +154,149 @@
             </table>
 
         </section>
+        <section>
+    
+            <h1>Efeito Zebrado</h1>
+            <p>O efeito zebrado em tabelas é uma técnica de design que alterna o estilo de fundo das linhas em uma tabela para tornar a leitura mais fácil e agradável. Ele é geralmente usado para diferenciar visualmente as linhas da tabela, especialmente em conjuntos de dados extensos, tornando mais simples para os usuários acompanhar as informações em diferentes linhas. </p>
+            <p>
+            Uma  técnicas comumente utilizada é criar pseudo-classes. Neste exemplo usaremos a <strong>pseudo-classe nth-child: </strong>. com os valores <strong>odd</strong> e <strong>even</strong>  <strong>(:nth-child(odd)) (:nth-child(even))</strong>. Verifique o código fonte para notar a aplicação desta <strong>pseudo-classe</strong>. Para simplificar usaremos a mesma tabela para exemplificar a aplicação deste efeito.
+            </p>
+        </section>
+        
+        <section>
+            <table>
+                <caption>População por Estado</caption>
+                <thead>
+                    <tr>
+                        <th  scope="col">Estado</th>
+                        <th scope="col">População</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    	<tr class="zb">
+                            <td>Acre</td>
+                            <td class="num">830 026</td>
+                        </tr>
+                        <tr class="zb">
+                            <td>Alagoas</td>
+                            <td class="num">3 127 511</td>
+                        </tr>
+                        <tr class="zb">
+                            <td>Amapá</td>
+                            <td class="num">733 508</td>
+                        </tr>
+                        <tr class="zb">
+                            <td>Amazonas</td>
+                            <td class="num">3 941 175</td>
+                        </tr>
+                        <tr class="zb">
+                            <td> Bahia</td>
+                            <td class="num">14 136 417</td>
+                        </tr>
+                        <tr class="zb">
+                            <td>Ceará</td>
+                            <td class="num">8 791 688</td>
+                        </tr>
+                        <tr class="zb">
+                            <td> Distrito Federal</td>
+                            <td class="num">2 817 068</td>
+                        </tr>
+                        <tr class="zb">
+                            <td> Espírito Santo</td>
+                            <td class="num">3 833 486</td>
+                        </tr>
+                        <tr class="zb">
+                            <td>Goiás</td>
+                            <td class="num">7 055 228</td>
+                        </tr>
+                        <tr class="zb">
+                            <td> Maranhão</td>
+                            <td class="num">6 775 152</td>
+                        </tr>
+                        <tr class="zb">
+                            <td>Mato Grosso</td>
+                            <td class="num">3 658 813</td>
+                        </tr>
+                        <tr class="zb">
+                            <td> Mato Grosso do Sul</td>
+                            <td class="num">2 756 700</td>
+                        </tr>
+                        <tr class="zb">
+                            <td>Minas Gerais</td>
+                            <td class="num">20 538 718</td>
+                        </tr>
+                        <tr class="zb">
+                            <td>Pará</td>
+                            <td class="num">8 116 132</td>
+                        </tr>
+                        <tr class="zb">
+                            <td>Paraíba</td>
+                            <td class="num">3 974 495</td>
+                        </tr>
+                        <tr class="zb">
+                            <td> Paraná</td>
+                            <td class="num">11 443 208</td>
+                        </tr>
+                        <tr class="zb">
+                            <td> Pernambuco</td>
+                            <td class="num">9 058 155</td>
+                        </tr>
+                        <tr class="zb">
+                            <td> Piauí</td>
+                            <td class="num">3 269 200</td>
+                        </tr>
+                        <tr class="zb">
+                            <td> Rio de Janeiro</td>
+                            <td class="num">16 054 524</td>
+                        </tr>
+                        <tr class="zb">
+                            <td>Rio Grande do Norte</td>
+                            <td class="num">3 302 406</td>
+                        </tr>
+                        <tr class="zb">
+                            <td>Rio Grande do Sul</td>
+                            <td class="num">10 880 506</td>
+                        </tr>
+                        <tr class="zb">
+                            <td>Rondônia</td>
+                            <td class="num">1 581 016</td>
+                        </tr>
+                        <tr class="zb">
+                            <td> Roraima</td>
+                            <td class="num">636 303</td>
+                        </tr>
+                        <tr class="zb">
+                            <td> Santa Catarina</td>
+                            <td class="num">7 609 601</td>
+                        </tr>
+                        <tr class="zb">
+                            <td>São Paulo</td>
+                            <td class="num">44 420 459</td>
+                        </tr>
+                        <tr class="zb">
+                            <td>Sergipe</td>
+                            <td class="num">2 209 558</td>
+                        </tr>
+                        <tr class="zb">
+                            <td> Tocantins</td>
+                            <td class="num">1 511 459</td>
+                        </tr>
+                </tbody>
 
+                <tfoot>
+                    <th scope="row">Total de Habitantes =></th>
+                    <td class="num" id="tot"><strong>203 062 512</strong></td>
+                </tfoot>
+
+            </table>
+
+        </section>
+        <section>
+            <h1>Cabeçalhos Fixos</h1>
+            <p> Em algumas ocasiões podemos ter a necessidade de criar uma tabela que tem um conteudo vertical e horizontals muito alongado. Nestes casos, quando o usuário rola a pagina pode ocorrer de o contúdo do cabeçalho ficar escondido, fazendo o usuário ter que retornar ao incio da tabela para verificar qual é o cabeçalho da informação. Por isso, aplicamos na tabela acima o recurso de <strong>cabeçalho fixo</strong>. Com a aplicação deste recurso o cabeçalho sempre ficará visivel enquento os dados da tabela tiver visivel na tela. </p>
+
+            <p>Para isso, definimos a tabela com um <strong>position: relative</strong>, seletamos o th, que está dentro do tr, que está dentro do cabeçalho, <strong>(thead > tr > th)</strong>  e definimos o <strong>position:sticky; top: 0;</strong> e <strong>background-color:mesma cor do cabeçalho;</strong>. Note que o <strong>position sticky</strong> deixa o cabeçalho fixo apenas até o momento em que a tabela está visível. Verifique o código fonte para notar estas configurações. </p>
+        </section>
 
     </main>
 

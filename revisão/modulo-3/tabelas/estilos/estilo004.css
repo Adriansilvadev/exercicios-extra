@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+table {
+    border-collapse: collapse;
+    width:300px;
+   
+
+}
+caption {
+    margin-top: 20px;
+    padding: 10px;
+    font-weight: bolder;
+    font-size: 1.2em;
+}
+
+td {
+    border: 1px  solid black;
+    padding: 10px;
+    height: 30px;
+    text-align: center;
+   
+}
+
+.ex {
+    border-collapse: separate;
+    width: 500px;
+}
+
+.fit {
+    width: 57px;
+}
+
+#zero {
+    width: 40px;
+}
+
+#quar {
+    border-collapse: separate;
+   
+}
+
+#ld {
+    width: 15px;
+}

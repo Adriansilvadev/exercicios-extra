@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela Completa</title>
+    <link rel="stylesheet" href="estilos/estilo005.css">
+</head>
+<body>
+    <header>
+        <h1>Tabela com Mesclagem e Escopo</h1>
+    </header>
+    <main>
+        <p>Nesta página construimos uma tabela simples, mas que mostra como podemos usar os recursos de <strong>mesclagem e scope</strong>. Algo importante a citar é que o atributo <strong>"scope"</strong> usado no elemento<strong> th</strong> em HTML ajuda a definir o escopo ou o contexto das células de cabeçalho em uma tabela. Ele fornece informações cruciais para os leitores de tela e para outros dispositivos de assistência, ajudando-os a entender o contexto e a estrutura da tabela, melhorando assim a acessibilidade. </p>
+        <p>
+            Aproveitamos esta tabela para treinar o uso de 2 recursos aprendidos em exercício anterior, o efeito zebrado e o cabeçalho fixo. Para isso vamos adicionar mais alguns parágrafos com lorens depois da tabela. Veja como vai ficar:
+        </p>
+        <section>
+            <div id="container">
+                <table>
+                    <caption> Filmes Favoritos</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Grupo</th>
+                            <th scope="col">Nomes</th>
+                            <th scope="colgroup" colspan="3">Filmes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th  scope="rowgroup"rowspan="4">Mulheres</th>
+                
+                        </tr>
+                        <tr>
+                            <td>Ana Maria Santos</td>
+                            <td>Alien</td>
+                            <td>Rambo</td>
+                            <td>Vingadores</td>
+                        </tr>
+                        <tr>
+                            <td>Beatriz souza</td>
+                            <td>Hulk</td>
+                            <td>Incenption</td>
+                            <td>Batman</td>
+                        </tr>
+                        <tr>
+                            <td>Claudia Melo</td>
+                            <td>Oblivion</td>
+                            <td>Matrix</td>
+                            <td>Big Hero</td>
+                        </tr>
+                        <tr>
+                            <th scope="rowgroup" rowspan="4">Homens</th>
+                        </tr>
+                        <tr>
+                            <td>Bruno Mendonça</td>
+                            <td>Intocáveis</td>
+                            <td>Amnésia</td>
+                            <td>Gladiador</td>
+                        </tr>
+                        <tr>
+                            <td>Daniel Lourenço</td>
+                            <td>Wall-E</td>
+                            <td>Oldboy</td>
+                            <td>dangal</td>
+                        </tr>
+                        <tr>
+                            <td>Fabiano Mota</td>
+                            <td>Star Wasr 5</td>
+                            <td>Taxi Driver</td>
+                            <td>Toy Story</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                    </tfoot>
+                </table>
+            </div>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa excepturi dolorum illo temporibus. Odit deserunt distinctio, cupiditate magnam ullam nisi perferendis rem, nam exercitationem voluptate veniam sint, accusamus possimus ad.
+            Odit eligendi quasi deserunt beatae molestiae omnis laborum mollitia totam voluptate. Cum sed vero consequatur, fuga aliquid saepe sint consequuntur. Quidem voluptatem ut veritatis odit velit repellat natus necessitatibus ab?
+            Exercitationem culpa cupiditate ipsa ea eveniet eaque quae, delectus ratione velit error molestiae nisi non nobis voluptas repudiandae, maiores illum. </p>
+            <p>
+            Deserunt delectus, illum consequuntur debitis nam voluptate praesentium mollitia? Odit!
+            Ut odio, veritatis ducimus, et ea alias molestiae voluptatibus maxime quasi porro excepturi accusantium laborum magni quas nobis eius? Ad nesciunt iure suscipit nemo nostrum cumque quae provident doloremque quaerat.
+            Vero, labore illo! Modi nobis quod ratione alias vero earum molestias, ipsum corrupti adipisci pariatur nostrum, maxime porro soluta voluptas delectus architecto ea error mollitia necessitatibus reiciendis provident, nam doloremque.
+            </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa excepturi dolorum illo temporibus. Odit deserunt distinctio, cupiditate magnam ullam nisi perferendis rem, nam exercitationem voluptate veniam sint, accusamus possimus ad.
+            Odit eligendi quasi deserunt beatae molestiae omnis laborum mollitia totam voluptate. Cum sed vero consequatur, fuga aliquid saepe sint consequuntur. Quidem voluptatem ut veritatis odit velit repellat natus necessitatibus ab?
+            Exercitationem culpa cupiditate ipsa ea eveniet eaque quae, delectus ratione velit error molestiae nisi non nobis voluptas repudiandae, maiores illum. </p>
+            <p>
+            Deserunt delectus, illum consequuntur debitis nam voluptate praesentium mollitia? Odit!
+            Ut odio, veritatis ducimus, et ea alias molestiae voluptatibus maxime quasi porro excepturi accusantium laborum magni quas nobis eius? Ad nesciunt iure suscipit nemo nostrum cumque quae provident doloremque quaerat.
+            Vero, labore illo! Modi nobis quod ratione alias vero earum molestias, ipsum corrupti adipisci pariatur nostrum, maxime porro soluta voluptas delectus architecto ea error mollitia necessitatibus reiciendis provident, nam doloremque.
+            </p>
+        </section>
+
+    </main>
+    <footer>
+        <p>Página criada por Adriano Silva durante o Módulo 3 do Curso de HTML5 e CSS3.</p>
+    </footer>
+    
+</body>
+</html>

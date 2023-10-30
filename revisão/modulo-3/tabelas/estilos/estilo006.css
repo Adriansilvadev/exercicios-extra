@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+caption {
+    font-weight: bold;
+    font-size: 2em;
+}
+
+table {
+    border-collapse: collapse;
+    margin: auto;
+    width: 70vw;
+    margin-top: 30px;
+    
+}
+
+th {
+    border: 1px solid black;
+    padding: 5px;
+    font-size: 1.1em;
+    background-color: rgba(128, 128, 128, 0.576);
+    text-align: center;
+    
+}
+
+td {
+    border: 1px solid black;
+    padding: 5px;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.num {
+    text-align: center;
+}
+
+.med {
+    text-align:left ;
+}
+

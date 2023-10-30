@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesclagem de Células  </title>
+   <link rel="stylesheet" href="estilos/estilo004.css">
+</head>
+<body>
+    <header>
+        <h1>Mesclagem de Células</h1>
+    </header>
+
+    <main>
+        <section>
+            <p>Mesclar células em HTML é uma técnica usada para combinar várias células adjacentes em uma única célula maior. Isso pode ser útil ao criar tabelas mais complexas em que precisamos agrupar certos dados ou criar um layout específico. A mesclagem de células é feita usando os atributos rowspan e colspan nos elementos <strong>td</strong> ou <strong>th</strong>, dependendo se você deseja mesclar <strong>linhas ou colunas</strong>. Ao definir o valor de <strong>rowspan ou colspan</strong>, você indica ao navegador quantas células devem ser mescladas. Isso permite criar tabelas mais complexas e com melhor apresentação visual.</p>
+            <table>
+                <caption>Mesclagem Simples</caption>
+                <thead>
+
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>A</td>
+                        <td colspan="2">B</td>
+                       
+                    </tr>
+                    <tr>
+                        <td rowspan="3">D</td>
+                        <td>E</td>
+                        <td rowspan="2">F</td>
+                    </tr>
+                    <tr>  
+                        <td>H</td>
+                        
+                    </tr>
+                    <tr>
+                        <td colspan="2">M</td>
+                    </tr>
+                    
+                </tbody>
+                <tfoot></tfoot>
+            </table>
+        </section>
+        <section>
+            <p>Aqui estão mais 3 exemplos de tabelas mescladas. Dessa vez ampliamos um pouco mais o alcance das mesclagens.</p>            
+            
+            <table class="ex">
+                <caption>Mesclagem Simples 2</caption>
+                <thead>
+
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td rowspan="2">3</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>7</td>  
+                    </tr>
+                    <tr>
+                        <td colspan="3">8</td>
+                        <td>9</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">10</td>
+                        <td colspan="2">11</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td>14</td>
+                        <td>15</td>
+                    </tr>  
+                </tbody>
+                <tfoot>
+
+                </tfoot>
+            </table>
+            <table class="ex">
+                <caption>Mesclagem Simples 3</caption>
+                <thead>
+
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td rowspan="2">3</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>7</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">8</td>
+                        <td>9</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">10</td>
+                        <td colspan="2">11</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                       
+                        <td>13</td>
+                        <td>14</td>
+                        <td>15</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+
+                </tfoot>
+            </table>
+            <table id="quar">
+                <caption>Mesclagem simples (layout teclado numérico)</caption>
+                <thead>
+
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="fit">num lock</td>
+                        <td>/</td>
+                        <td class="fit">*</td>
+                        <td class="fit" id="ld">-</td>
+                    </tr>
+                    <tr>
+                        <td class="fit">7</td>
+                        <td class="fit">8</td>
+                        <td class="fit">9</td>
+                        <td class="fit" rowspan="2" id="ld">+</td>
+                    </tr>
+                    <tr>
+                        <td class="fit">4</td>
+                        <td class="fit">5</td>
+                        <td class="fit">6</td>
+                        
+                    </tr>
+                    <tr>
+                        <td class="fit">1</td>
+                        <td class="fit">2</td>
+                        <td class="fit">3</td>
+                        <td class="fit" rowspan="2" id="ld">enter</td>
+                    </tr>
+                    <tr>
+                        <td id="zero" colspan="2">0</td>
+                        
+                        <td class="fit">2</td>
+                       
+                    </tr>
+                </tbody>
+                <tfoot>
+
+                </tfoot>
+            </table>
+
+        </section>
+    </main>
+
+    <footer>
+
+    </footer>
+    
+    
+</body>
+</html>

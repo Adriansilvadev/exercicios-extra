@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iframe com coteúdo local</title>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            background-color: rgba(164, 94, 230, 0.386);
+        }
+        
+        h1 {
+            text-align: center;
+        }
+
+        main {
+            background-color: white;
+            width: 80vw;
+            margin: auto;
+            padding: 20px;
+            text-indent: 25px;
+            text-align: justify;
+            font-size: 1.3em;
+            border-radius: 15px;
+            
+        }
+
+        main p {
+            padding: 10px;
+        }
+
+        #pri {
+            width: 60vw;
+            height: 350px;
+            display: block;
+            margin: auto;   
+        }
+
+        ul a {
+            display: block;
+            text-decoration: none;
+        }
+
+        iframe {
+            width: 60vw;
+            height: 350px;
+            display: block;
+            margin: auto;
+            border-radius: 10px;
+        }
+
+        #doc {
+            background-color: lightslategray;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Conteúdo local em iframes</h1>
+
+    </header>
+    <main>
+        <section>
+            <p>Além de usar os iframe para exibir conteudo de outras página web, nós também podemos usar os iframes para exibir conteúdo local. Vejamos no exemplo abaixo como faremos isso. Note que o comportamento do iframe é o mesmo, visto que o que mudou foi apenas  a fonte do iframe. </p>
+
+            <iframe id="pri" src="../modulo-3/tabelas/tabela 003.html" frameborder="1"></iframe>
+
+            <p>Agora vamos explorar outras possibilidades que os iframes nos oferecem. Vamos experimentar a possibilidade de criar navegação usando os iframes. Para isso aproveitaremos algumas páginas criadas nos exercícios anteriores. </p>
+
+            <ul>
+                <a href="../modulo-3/tabelas/tabela002.html" target="vis">Página 01</a>
+                <a href="../modulo-3/tabelas/tabela 003.html" target="vis">Página 02</a>
+                <a href="../modulo-3/tabelas/tabela005.html" target="vis">Página 03</a>
+            </ul>
+            <p>
+                Acima, temos uma lista de paginas que nos direcionam para 3 páginas criadas nos exercícios anteriores. Normalmente quando clicamos em um link compo os acima ele abrirá uma nova aba ou mudará a aba atual para o conteúdo indicado. Dessa vez será diferente, quando clicar em qualquer das 3 opções, a página correspondente deverá abrir no iframe logo aqui abaixo:
+            </p>
+            <iframe name="vis" frameborder="1"></iframe>
+            <p>
+                Para obter este resultado precisamos dar um <strong>name </strong>ao <strong>iframe</strong> e em seguida definir o <strong>target</strong> do link para esse name. 
+            </p>
+            <p>
+                Outra cois que podemos fazer com o iframe é inserir um documento embutido diretamente no código HTML, em vez de referenciar um documento externo. Isso é particularmente útil quando precisamos exibir um conteúdo HTML simples dentro de um iframe, sem a necessidade de criar um arquivo separado. Para isso usamos o atributo srcdoc.veja abaico um pequeno exemplo que ilustra isso:
+            </p>
+          <iframe id="doc" frameborder="1" srcdoc=" <h1>Conteúdo direto no código</h1> <p> Verifique o código fonte, e notará que este título e estes parágrafos foram escritos dentro do atributo <strong> 'srcdoc' </strong>. Dessa maneira não foi preciso criar um html adicional para incluir esta pequena informação. </p> <p> Também podemos usar o <strong> 'srcdoc' </strong> para adicionar imagens, como pode ser visto logo abaixo: </p> <img src= 'iframe.png'>" ></iframe>
+            <p>
+                É claro que podemos fazer muito mais com os iframes, como por exemplo, inserir videos. Na verdade já fizemos uso deste recurso em páginas anteriores, quando consideramos a incorporação de vídeos ao conteudo da página.
+            </p>
+
+
+
+        </section>
+    </main>
+
+    <footer>
+
+    </footer>
+    
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iframes</title>
+    <style>
+
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            background-color: rgba(113, 237, 88, 0.504);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        main {
+            width: 80vw;
+            margin: auto;
+            background-color: white;
+            padding: 30px;
+            text-align: justify;
+            text-indent: 25px;
+            line-height: 1.3em;
+            font-weight: 500;
+            font-size: 1.2em;
+            border-radius: 15px;
+            box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.406);
+        }
+
+        h1 {
+            text-align: center;
+            padding: 20px;
+            font-size: 2.8em;
+            line-height: 1em;
+        }
+
+        p {
+            padding: 10px;
+        }
+
+        iframe {
+            background-color:rgba(113, 237, 88, 0.504) ;
+            border-radius: 10px;
+            display: block;
+            margin: auto;
+        }
+
+        #if {
+            border: 5px dotted rgb(0, 255, 17);
+        }
+
+        footer p {
+            background-color: rgba(52, 109, 40, 0.782);
+            padding: 10px;
+            margin-top: 15px;
+            font-weight: bolder;
+            font-size: 1.3em;
+            text-align: center;
+
+        }
+
+    </style>
+    
+</head>
+<body>
+    <header>
+        <h1>Iframes</h1>
+    </header>
+    <main>
+        <section>
+            <p>
+                Nesta página vamos aprender sobre os  <strong>iframes.</strong> Dito de maneira simples, um <strong>iframe</strong> é um elemento HTML que permite incorporar outra página da web dentro de uma página. Ele funciona como um contêiner retangular que pode exibir um documento HTML inteiro em um contexto aninhado. Por meio do iframe, é possível incorporar não apenas páginas da web, mas também outros tipos de conteúdo, como vídeos, mapas e muito mais.
+            </p>
+                
+            <p>
+                Ao usar o elemento <strong>iframe</strong>, podemos especificar a origem do conteúdo que desejamos incorporar, além de ajustar o tamanho e outras propriedades do quadro. Isso é útil quando queremos integrar conteúdo de outros sites em uma página da web própria, como incorporar um mapa interativo do Google Maps ou um vídeo do YouTube.   
+            </p>
+            <p>
+               Vamos ver abaixo alguns exemplos de <strong>iframes</strong>:
+               
+            </p>
+            <p>
+                Aqui está um iframe <iframe src="https://www.cursoemvideo.com/" frameborder="0"></iframe>
+            </p>
+            <p>
+                Conforme pode ser visto, o iframe carrega o conteúdo de outra pagina em um pequeno espaço dentro da mensma página. Outra caracteristica que pode ser notada neste exemplo, é que o iframe é um elemento inline. Se você verifiar o código fonte desta página também vai notar que na tag &<strong>lt;Iframe&gt;</strong>
+                 podemos definir o <strong>source (src)</strong> e  <strong>o frameborder</strong>, que é a espessura da borda que basicamente aceita como valores,<strong> 0 (zero)</strong> que significa sem borda aparente ou <strong>qualquer número</strong> que significa <strong>com borda</strong> visível. Vamos repetir esse mesmo iframe mas dessa vez definindo o frameborder com o valor 1. Veja o resultado abaixo:
+            </p>
+            
+                Aqui está novamente <iframe src="https://www.cursoemvideo.com/" frameborder="1"></iframe>   
+           
+            <p>
+                Se olhar com atenção notará que há uma pequena borda em volta do iframe. Mas é importante saber que nem sempre podemos usar um iframe para exibir o conteúdo de outro site. Veja um exemplo disso abaixo:
+            </p> 
+        
+            <iframe src="https://www.google.com.br/?hl=pt-BR" frameborder="1"></iframe>
+        
+            <p>Diferente dos exemplos anteriores essa página não foi exibida. Isso acontece porque alguns sites e páginas da web têm políticas de segurança específicas para evitar que seu conteúdo seja carregado em iframes em outros sites. Isso é feito como uma medida de segurança para proteger o conteúdo do site de ser exibido em contextos não autorizados.Isso ajuda a proteger os visitantes de possíveis ataques de phishing e outros riscos de segurança. </p>
+        </section>
+        <section>
+            <h1>Personalizando iframes</h1>
+            <p>
+                Tendo em vista que haverá situações em que não será possivel usar um iframe para exibir o conteúdo de outro site em nosso site, podemos adiconar uma mensagem e um link na tag <strong>iframe </strong> para que o usuário possa consumir o conteúdo desejado diretamente do site citado.Vamos repetir o exemplo anterior adicionando essa funcionalidade:
+            </p>
+            
+            <iframe src="https://www.google.com.br/?hl=pt-BR"  frameborder="1">
+                <a href="https://www.google.com.br/?hl=pt-BR">Infelizmente o conteúdo não pode ser exibido nesta página clique aqui para ver o conteudo.</a>
+            </iframe>
+            
+            <p>
+                Infelizmte, por razões desconhecidas por mim, o navegador não exibiu o link nem a mensagem de erro, mas você pode verifica-los consultando o código fonte desta página.  
+            </p>
+            <h2>
+                Ajustando o tamanho do iframe (L x A)
+            </h2>
+            <p>
+                Por padrão um iframe tem <strong>300px de largura</strong> por <strong>150px de altura</strong>. Mas isso pode ser alterado de 2 maneiras. Podemos fazer isso na propria tag iframe adicionando o width e o height, ou através da folha de estilos CSS. Lembrando que as CSSs são soberanas para definir esses valores. Vamos adicionar mais um exmplo de iframe para exemplificar a aplicação desta propriedades definidas dentro da tag iframe. Veja abaixo um iframe com <strong>500px de largura</strong> e<strong> 250px de altura</strong>.     
+            </p>
+           
+            <iframe src="https://www.cursoemvideo.com/" frameborder="1" width="500px" height="250px" scrooling="no" ></iframe>
+         
+            <p> De modo geral um iframe não consegue exibir todo o conteúdo da referida página. Isso acontece obviamente, por causa do tamanho do iframe, o que por consequência ocasiona a rolagem do conteúdo dentro do iframe. Neste caso podemos optar por usar o parâmetro <strong>scrooling</strong> com os valores:<strong> AUTO => </strong>valor padrão, que cria a barra de rolagem se necessário. <strong>YES =></strong> Cria a barra de rolagem mesmo que não seja necessário. <strong>NO =></strong> remove a barra de rolagem mesmo que o conteúdo não caiba no iframe. Porém pode acontecer de a barra de rolagem continuar aparecendo mesmo se com o parametro definido como <strong>"no"</strong>. inclusive foi o que aconteceu durante a criação deste exemplo.  </p>
+
+            <p> Confomrme ficou evidente até aqui, as personalizações dos iframes usando parametros da própria tag são limitados, por isso tambems podemos personalizar nossos iframes usando as folhas de estilo. Dessa maneira podemos personalizar ainda mais os nossos iframes, tornando ainda mais interessante o uso deste recurso em nossos sites. Veja um exemplo disso no ultimo exemplo desta página. Aproveite para verificar como as propriedades CSSs são soberanas em relação às propriedades aplicadas na própria tag iframe.</p>
+
+            <iframe src="https://www.cursoemvideo.com/" frameborder="1" width="500px" height="250px" scrooling="no" id="if"></iframe>
+            
+        </section>
+
+    </main>
+    <footer>
+        <p>Página criada por Adriano Slva durante o Módulo 4 do curso de HTML5 e CSS3</p>
+    </footer>
+    
+</body>
+</html>

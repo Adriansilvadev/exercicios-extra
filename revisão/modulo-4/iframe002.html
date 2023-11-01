@@ -13,10 +13,17 @@
 
         body {
             background-color: rgba(164, 94, 230, 0.386);
+            font-family: Arial, Helvetica, sans-serif;
         }
         
         h1 {
             text-align: center;
+            padding: 10px;
+            margin-top: 10px;
+        }
+        h2, h3 {
+            margin-left: 130px;
+            padding: 15px;
         }
 
         main {
@@ -28,11 +35,15 @@
             text-align: justify;
             font-size: 1.3em;
             border-radius: 15px;
+            margin-top: 15px;
+            margin-bottom: 10px;
             
         }
 
         main p {
-            padding: 10px;
+            padding: 15px;
+            width: 60vw;
+            margin: auto;
         }
 
         #pri {
@@ -53,10 +64,15 @@
             display: block;
             margin: auto;
             border-radius: 10px;
+            background-color:#DCC1F5 ;
         }
 
-        #doc {
-            background-color: lightslategray;
+        footer {
+            background-color: #837491;
+            text-align: center;
+            font-size: 1.1em;
+            font-weight: bold;
+            padding: 10px;
         }
     </style>
 </head>
@@ -79,7 +95,7 @@
                 <a href="../modulo-3/tabelas/tabela005.html" target="vis">Página 03</a>
             </ul>
             <p>
-                Acima, temos uma lista de paginas que nos direcionam para 3 páginas criadas nos exercícios anteriores. Normalmente quando clicamos em um link compo os acima ele abrirá uma nova aba ou mudará a aba atual para o conteúdo indicado. Dessa vez será diferente, quando clicar em qualquer das 3 opções, a página correspondente deverá abrir no iframe logo aqui abaixo:
+                Acima, temos uma lista de paginas que nos direcionam para 3 páginas criadas nos exercícios anteriores. Normalmente quando clicamos em um link como o acima ele abre uma nova aba ou muda a aba atual para o conteúdo indicado. Dessa vez será diferente, quando clicar em qualquer das 3 opções, a página correspondente deverá abrir no iframe logo aqui abaixo:
             </p>
             <iframe name="vis" frameborder="1"></iframe>
             <p>
@@ -90,16 +106,25 @@
             </p>
           <iframe id="doc" frameborder="1" srcdoc=" <h1>Conteúdo direto no código</h1> <p> Verifique o código fonte, e notará que este título e estes parágrafos foram escritos dentro do atributo <strong> 'srcdoc' </strong>. Dessa maneira não foi preciso criar um html adicional para incluir esta pequena informação. </p> <p> Também podemos usar o <strong> 'srcdoc' </strong> para adicionar imagens, como pode ser visto logo abaixo: </p> <img src= 'iframe.png'>" ></iframe>
             <p>
-                É claro que podemos fazer muito mais com os iframes, como por exemplo, inserir videos. Na verdade já fizemos uso deste recurso em páginas anteriores, quando consideramos a incorporação de vídeos ao conteudo da página.
+                É claro que podemos fazer muito mais com os iframes, como por exemplo, inserir videos. Na verdade já fizemos uso deste recurso em páginas anteriores, quando consideramos a incorporação de vídeos ao conteudo de uma página web. Vejamos novamente um vídeo incorporado em nossa página, e perceba que o iframe foi o elemento utilizado para esta finalidade.
             </p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/dzhJsc1YszU?si=dR3YrbzcSpsPEbjF" title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <h2>inserindo Mapas</h2>
+            <p>Outra possibilidade que o iframe nos trás é adiconar o recurso de mapas à nossa página web. Isso pode ser util em algumas situações. Veja os exemplos abaixo: </p>
+            <h3>Goole Maps</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31343.423019386384!2d-37.06457788767418!3d-10.89308581815204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x71ab34c92d2fe25%3A0x4898c4829e90cf04!2sZool%C3%B3gico%20da%20Cidade!5e0!3m2!1spt-BR!2sbr!4v1698827197467!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <h3>Mapas do Waze</h3>
+            <iframe src="https://embed.waze.com/iframe?zoom=16&lat=-10.885955&lon=-37.056647&ct=livemap" width="600" height="450" allowfullscreen></iframe>
 
-
+            <p>
+                Além disso, podemos usar os iframes para incorporar documentos e aprentações ppt, etc. Isso mostra que os iframes ainda são amplamente utilizados para adicionar funcionalidades a um site, apenas precisamos ter em mente seus incovenientes e levar isso em conta ao decidir usá-los em nossa página web.
+            </p>
 
         </section>
     </main>
 
     <footer>
-
+        <p>Página criada por Adriano Silva durante o Módulo 4 do curso de HTML5 e CSS3.</p>
     </footer>
     
 </body>

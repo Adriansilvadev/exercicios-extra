@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Criando formulários</h1>
+    </header>
+
+    <main>
+        <p>Os formulários desempenham um papel fundamental no desenvolvimento web, pois permitem a interação e o envio de informações entre usuários e servidores. Eles são essenciais para coletar dados, como entradas do usuário, preferências e seleções, que são posteriormente processados ou utilizados para diversos fins.Veja alguns pontos que destacam a importância dos formulários no desenvolvimento web: </p>
+        <p>
+        <strong>Coleta de dados do usuário:</strong> Os formulários são amplamente utilizados para coletar dados pessoais, como nomes, endereços, informações de contato e muito mais. Eles são essenciais para o registro de usuários, envio de pedidos, pesquisas e qualquer tipo de entrada personalizada.
+        </p>
+        <p><strong>Interação com os usuários:</strong> Os formulários fornecem uma maneira de os usuários interagirem com um site ou aplicativo. Eles permitem que os usuários enviem informações, façam escolhas e forneçam feedback, o que pode melhorar a experiência do usuário e a satisfação geral.</p>
+        <p><strong>Processamento de dados:</strong> Os dados submetidos por meio de formulários podem ser processados ​​em servidores, permitindo que os desenvolvedores executem várias operações, como armazenamento de dados em bancos de dados, envio de e-mails, autenticação de usuários e muito mais.</p>
+        <p><strong>Personalização da experiência do usuário:</strong> Os formulários podem ser usados para personalizar a experiência do usuário, permitindo que os usuários forneçam informações específicas que podem ser usadas para adaptar o conteúdo ou os serviços oferecidos pelo site ou aplicativo.</p>
+        <p><strong>Feedback e comunicação:</strong> Os formulários podem ser usados para receber feedback dos usuários, incluindo reclamações, sugestões e dúvidas. Eles fornecem uma maneira direta de comunicação entre o usuário e o proprietário do site ou aplicativo.</p>
+        <p>Todo formulário deve estar contido dentro da tag <strong>"form"</strong>. Para esta tag há alguns atributos importantes, mas neste primeiro exemplo faremos da forma mais simples </p>
+        <section>
+            <form>
+                <p>Nome:</p>
+                <p>Sobrenome:</p>
+            </form>
+            <p>Veja que temos a necessidade de criar uma caixa para o preenchimento das informações solicitadas, para isso usamos a tag  <strong>"input" </strong> do tipo <strong>"text"</strong>. Esse tipo de input tem os atributos <strong>"name" e "id"</strong>, sobre os quais veremos a utilidade mais à frente. Veja se consegue preencher as informações nos campos disponíveis: </p>
+            <form>
+                <p>Nome: <input type="text" name="nome" id="nome"> </p>
+                <p>Sobrenome: <input type="text" name="sobrenome " id="sobrenome"> </p>
+            </form>
+            <p>
+                Agora que você já preencheu as informações solicitadas, deve ter sentido a falta de um botão para enviar as informações preenchidas. Para isso usamos outro input, o input do tipo <strong>submit</strong> que tem o atributo <strong>"value"</strong>, que se refere às informaçoes do bo botão, neste caso <strong>"Enviar". </strong> 
+            </p>
+            <form>
+                <p>Nome: <input type="text" name="nome" id="nome"> </p>
+                <p>Sobrenome: <input type="text" name="sobrenome " id="sobrenome"> </p>
+                <input type="submit" value="Enviar">
+            </form>
+            <p>
+                A seguir veremos como criar uma ligação entre os campos do formulário. Isso pode ser especialmente útil quando estamos preenchendo um formulário em um dispositivo com tela reduzida. Más, é importante esclarecer que esta não é a razão principal pra o uso deste recurso. 
+            </p>
+        </section>
+
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>

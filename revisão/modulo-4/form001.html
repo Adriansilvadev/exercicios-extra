@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulários</title>
-
-    <style>
-        * {
-            font-family: Arial, Helvetica, sans-serif;
-        }
-    </style>
+    <link rel="stylesheet" href="estilos/estilo.css">
 </head>
 <body>
     <header>
-        <h1>Criando formulários</h1>
-    </header>
+        <h1>Criando Formulários</h1>
+   </header>
+   <nav>
+    <a href="#">Home</a>
+    <a href="#">Página 2</a>
+    <a href="#">Página 3</a>
+   </nav>
 
     <main>
         <p>Os formulários desempenham um papel fundamental no desenvolvimento web, pois permitem a interação e o envio de informações entre usuários e servidores. Eles são essenciais para coletar dados, como entradas do usuário, preferências e seleções, que são posteriormente processados ou utilizados para diversos fins.Veja alguns pontos que destacam a importância dos formulários no desenvolvimento web: </p>
@@ -31,27 +31,140 @@
                 <p>Nome:</p>
                 <p>Sobrenome:</p>
             </form>
+            <h2>"input"</h2>
             <p>Veja que temos a necessidade de criar uma caixa para o preenchimento das informações solicitadas, para isso usamos a tag  <strong>"input" </strong> do tipo <strong>"text"</strong>. Esse tipo de input tem os atributos <strong>"name" e "id"</strong>, sobre os quais veremos a utilidade mais à frente. Veja se consegue preencher as informações nos campos disponíveis: </p>
             <form>
                 <p>Nome: <input type="text" name="nome" id="nome"> </p>
                 <p>Sobrenome: <input type="text" name="sobrenome " id="sobrenome"> </p>
             </form>
+            <h2>"submit"</h2>
             <p>
-                Agora que você já preencheu as informações solicitadas, deve ter sentido a falta de um botão para enviar as informações preenchidas. Para isso usamos outro input, o input do tipo <strong>submit</strong> que tem o atributo <strong>"value"</strong>, que se refere às informaçoes do bo botão, neste caso <strong>"Enviar". </strong> 
+                Agora que você já preencheu as informações solicitadas, deve ter sentido a falta de um botão para enviar as informações preenchidas. Para isso usamos outro input, o input do tipo <strong>submit</strong> que tem o atributo <strong>"value"</strong>, que se refere às informaçoes do botão, neste caso <strong>"Enviar". </strong> 
             </p>
             <form>
-                <p>Nome: <input type="text" name="nome" id="nome"> </p>
-                <p>Sobrenome: <input type="text" name="sobrenome " id="sobrenome"> </p>
+                <p>Nome: <input type="text" name="nome2" id="nome2"> </p>
+                <p>Sobrenome: <input type="text" name="sobrenome2 " id="sobrenome2"> </p>
+                <input type="submit" value="Enviar">
+            </form>
+            <h2>"autocomplete" e "action"</h2>
+            <p>Geralmente, quando estamos preenchendo os dados em um formulário o navegador apresenta opcão de auto preenchimento utilizando os ultimos dados digitados. Podemo mudar isso através do atributo <strong>"autocomplete"</strong>, com o valor <strong>"off"</strong>. Veja a aplicaçõa disso no formulário abaixo: </p>
+            <p>Outro parâmetro que utilizamo em nossos formulários é o <strong>"action"</strong>, que especifica para onde os dados do formulário devem ser enviados quando o formulário é submetido. Geralmente, o valor desse atributo é um URL, que representa o endpoint do servidor onde os dados do formulário serão processados.É importante garantir que o valor do parâmetro <strong>"action"</strong> corresponda ao destino desejado para o processamento dos dados do formulário. Veja a aplicação destes parametros abaixo e no código fonte deste formulário. Veja que ao clicar em <strong>"Enviar"</strong>, o navegador tenta enviar o formulário que obviamente não pode ser localizado pois o mesmo não existe.</p>
+
+            <form action="cadastro.php"autocomplete="off">
+                <p>Nome <input type="text" name="nome3" id="nome3"></p>
+                <p> Sobrenome <input type="text" name="sobrenome3" id="sobrenome3"></p>
                 <input type="submit" value="Enviar">
             </form>
             <p>
-                A seguir veremos como criar uma ligação entre os campos do formulário. Isso pode ser especialmente útil quando estamos preenchendo um formulário em um dispositivo com tela reduzida. Más, é importante esclarecer que esta não é a razão principal pra o uso deste recurso. 
-            </p>
+            A seguir veremos como criar uma ligação entre os campos do formulário. Isso pode ser especialmente útil quando estamos preenchendo um formulário em um dispositivo com tela reduzida. Más, é importante esclarecer que esta não é a razão principal pra o uso deste recurso. Para criar essa relação usamos a tag <strong>"label"</strong>. Para isso envelopamos o campo de entrada que queremos fazer a ligação com a tag <strong>"label"</strong>  e definimos o <strong>"for"</strong> com o <strong>"id" correspondente</strong>,Isso cria uma associação entre o rótulo e o campo de entrada, permitindo que o usuário clique no rótulo para focar no campo de entrada correspondente. </p>
+
+            <p>Além disso, ao associar rótulos a elementos de formulário, os leitores de tela podem descrever corretamente o campo para usuários com deficiência visual, melhorando assim a acessibilidade do seu formulário. Veja que agora basta clicar no nome do campo desejado para seleciona-lo e digitar os dados. Note isso no formulário abaixo:</p>
+            <form action="cadastro.php" class="formulario">
+                <p><label for="inome">Nome</label> <input type="text" name="nome" id="inome"></p>
+                <p> <label for="isobrenome">Sobrenome</label> <input type="text" name="sobrenome" id="isobrenome"></p>
+                <input type="submit" value="Enviar">
+            </form>
+            <h2>Métodos de envio</h2>
+            <p>Os formulários HTML podem ser enviados usando diferentes métodos, que são especificados no atributo <strong>"method" </strong>da tag <strong>"form"</strong>. Os dois métodos principais de envio de formulários são <strong>"GET"</strong> e <strong>"POST"</strong>:</p>
+            <h2>"GET"</h2>
+            <p>O método <strong>"GET"</strong> anexa os dados do formulário ao URL de destino como uma string de consulta. Isso significa que os dados do formulário são visíveis na barra de endereços do navegador. É útil para formulários com poucos campos e para solicitações de busca, pois os parâmetros da consulta são visíveis e podem ser marcados como favoritos ou compartilhados. No entanto, esse método não é adequado para o envio de dados confidenciais, pois eles são visíveis para qualquer pessoa que possa visualizar o URL. Além disso o método <strong>"GET"</strong> limita o envio de dados a 3 mil bytes, ou aproximadamente 3 mil caracteres.</p>
+            <form action="cadastro.php" class="formulario" method="get" autocomplete="off">
+                <p><label for="inome4">Nome</label> <input type="text" name="nome4" id="inome4"></p>
+                <p> <label for="isobrenome">Sobrenome</label> <input type="text" name="sobrenome4" id="isobrenome4"></p>
+                <input type="submit" value="Enviar">
+            </form>
+            <h2>"POST"</h2>
+            <p>O método <strong>"POST"</strong> envia os dados do formulário no corpo da solicitação HTTP. Os dados não são exibidos na barra de endereços do navegador e não têm restrições de comprimento. É mais seguro para o envio de dados confidenciais, pois os dados não são visíveis na URL. Este método é frequentemente usado para enviar formulários que incluem informações confidenciais, como senhas ou dados de cartão de crédito. Ambos os métodos podem ser utilizados dependendo das necessidades específicas do seu formulário e da maneira como os dados devem ser tratados e visualizados.</p>
+            <form action="cadastro.php" class="formulario" method="post">
+                <p><label for="inome5">Nome</label> <input type="text" name="nome5" id="inome5"></p>
+                <p> <label for="isobrenome5">Sobrenome</label> <input type="text" name="sobrenome5" id="isobrenome5"></p>
+                <input type="submit" value="Enviar">
+            </form>
+            <h1>Controles Especiais em Formulários</h1> 
+            <p>Ao criar formulários podemos usar alguns controles específicos que possibilitam ter maior controle sobre os campos no formulário. Vejamos alguns deles:</p>
+            <h2>Preenchimento obrigatório</h2>
+            <p>Para começar vamos aprender como tornar o preenchimento de dados obrigatório em nossos formulários. Nos exemplos anteriores o formulário era enviado mesmo que os dados não fossem preenchidos. Para implementar essa funcionalidade ao formulário usamos o atributo <Strong>"required"</Strong> nos inputs que devem ter esta característica. Além disso, neste formulário adiconamos o botão de limpar usando o atributo <strong>"reset"</strong>. </p>
+            <form action="cadastro.php" method="post" autocomplete="off">
+                <p><label for="inom">Nome</label>
+                <input type="text" name="nome6" id="inom6" required> </p>
+                <p><label for="isobrenom6">Sobrenome</label>
+                <input type="text" name="sobrenome6" id="isobrenom6" required></p>
+                <p><label for="isenha">Senha</label>
+                    <input type="password" name="senha" id="isenha" required ></p>
+                
+                <input type="reset" value="Limpar" >
+                <input type="submit" value="Enviar">
+            </form>
+            <h2> Quantidade mínima e máxima de caracteres</h2>
+            <p>Outra coisa que podemos definir é a <strong>quantidade mínima e máxima</strong> de caracteres em um formulário. Para isso usamos os atributos  <strong>"minlength"</strong> e <strong>"maxlength"</strong>. Veja isso no código fonte e no formulário abaixo: </p>
+            <form action="cadastro.php" method="post" autocomplete="off">
+                <p><label for="mnome">Nome</label>
+                    <input type="text" name="mnome" id="mnome" required minlength="3" maxlength="55">
+                </p>
+                <p><label for="msobrenome">Sobrenome</label>
+                    <input type="text" name="msobrenome" id="msobrenome" required minlength="3" maxlength="25">
+                </p>
+                <p><label for="msenha">Senha</label>
+                    <input type="password" name="msenha" id="msenha"  required minlength="8" maxlength="22">
+                </p>
+                <input type="reset" value="Limpar"> 
+                <input type="submit" value="Enviar">
+            </form>
+            <h2>Tamanho da caixa de formulário</h2>
+            <p>Também podemos definir o tamanho das caixas dos formulários. Para isso, usamos o atributo <strong>"size"</strong>. É importante lembrar que o atributo <strong>"size"</strong> define o tamanho da caixa e não a quantidade de caracteres que é definida pelos atributos<strong>"minlength"</strong> e <strong>"maxlength"</strong>. Vejamos isso no exemplo a seguir:</p>
+            <form action="cadastro.php" method="post" autocomplete="off">
+                <p><label for="snome">Nome</label>
+                    <input type="text" name="snome" id="snome" minlength="3" maxlength="35" size="24">
+                </p>
+                <p><label for="ssobrenome">Sobrenome</label>
+                    <input type="text" name="ssobrenome" id="ssobrenome" minlength="3" maxlength="25" size="18">
+                </p>
+                <p><label for="ssenha">Senha</label>
+                    <input type="password" name="ssenha" id="ssenha" minlength="8" maxlength="25" size="23">
+                </p>
+            </form>
+                <p>Veja que neste caso os campos de preenchimentos tiveram os tamanhos ajustados para que houvesse uma armonia de tamanhos, porém conforme já informado a quantidade de caracteres não foi alterada por esse atributo.
+                </p>
+                <h2>placeholder</h2>
+                <p>Para tornar um formulário mais compreensivel e mais facil de ser preenchido pelo usuário, podemos inserir uma dica da informação a ser inserida em determinados campos. Isso podes ser feito usando o atributo <strong>"placeholder"</strong>. Veja como isso é feito no exemplo abaixo:</p>
+            <form action="cadastro.php" method="post" autocomplete="off">
+                    <p>
+                        <label for="pnome">Nome </label>
+                        <input type="text" name="pnome" id="pnome" placeholder="Insira seu primeiro nome">   
+                    </p>
+                    <p>
+                        <label for="psobrenome">Sobrenome</label>
+                        <input type="text" name="psobrenome" id="psobrenome" placeholder="insira seu ultimo nome.">
+                    </p>
+                    <p>
+                        <label for="psenha">Senha</label>
+                        <input type="password" name="psenha" id="psenha" placeholder="senha com  8 caracteres">
+                    </p>
+            </form>
+            <h2>autocomplete no input</h2>
+            <p>Conforme já vimos anteriormente, o autocomplete pode ser usado para permitir ou restringir o preenchimento automático das informações de um formulário. Quando usado dentro da tag <strong>form</strong> este atributo pode ter os valores <strong>"on"</strong> ou <strong>"off"</strong>. Mas quando usamos o <strong>"autocomplete"</strong> em um input temos várias possibilidades, podemos defnir mais especificamente qual tipo de dado será inserido no campo do formulário. Isso melhora a experiencia do usuário em seu site. </p>
+            <form action="cadastro.php" method="post" autocomplete="on">
+                <p>
+                    
+                    <label for="noinpt">Nome</label>
+                    <input type="text" name="noinpt" id="noinpt" autocomplete="username">
+                </p>
+                <p> <label for="soinp">Sobrenome</label>
+                    <input type="text" name="soinpt" id="soinpt" autocomplete="additional-name">
+                </p>
+                <p>
+                    <label for="seinpt">Senha</label>
+                    <input type="password" name="seinpt" id="seinpt" autocomplete="current-password">
+                </p>
+            </form>
+                <p>Embora não seja perceptível nenhuma mudança visual, a aplicação do autocomplete nos inputs permite que o navegador saiba mais especificamente que tipo  de informação pode ser sugerida para o autopreenchimento./p>
+               
+            <p>Até aqui já vimos que a tag <strong>"input"</strong> possibilita criar campos para a inserção de dados e informaçoes. Na próxima pagina veremos outros atributos para esta tag tão importante na criação de formulários. </p>
         </section>
 
     </main>
     <footer>
-
+        <p>Página criada por Adriano Silva durante o Módulo 4 do Curso de HTML5 e CSS3.</p>
     </footer>
 </body>
 </html>

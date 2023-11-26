@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+    <link rel="stylesheet" href="estilos/estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Criando Formulários</h1>
+        <h2>
+            Controles de Formulários
+        </h2>
+
+    </header>
+    <nav>
+        <a href="form001.html">Home</a>
+        <a href="form002.html">Página 2</a>
+        <a href="form003.html"> Página 3</a>
+         <a href="form004.html">Página 4</a>
+         <a href="#">Página 5</a>
+    </nav>
+    <main>
+        <h1>Elemento output</h1>
+        <p>A tag <strong>"output"</strong> em HTML é utilizada para representar o resultado de um cálculo ou de um usuário. Ela é frequentemente usada em conjunto com elementos de formulário, especialmente aqueles que envolvem interações do usuário. Veja um exemplo de uso dessa tag abaixo:</p>
+        <section>
+            <form action="cadastro.php" method="post" autocomplete="on">
+                <fieldset>
+                    <legend>Calculo de valores</legend>
+                   <p> <label for="in1">Número 1</label> <input type="number" name="n1" id="in1" min="0" max="50" required></p>
+
+                   <p><label for="in2">Número 2</label> <input type="number" name="n2" id="in2" min="0" max="50" required></p> 
+                   <p>
+                    <label for="isoma">Soma=</label> <output name="soma" id="isoma"> 0</output>
+                   </p>
+
+                </fieldset>
+                <p><input type="reset" value="LImpar">
+                <input type="submit" value="Enviar"></p> 
+            </form>
+            <p>Se você tentou interagrir com o formulário, deve ter se decepcionado com o fato de o campo soma não estar funcionando, isso acontece porque para que haja funcionalidade precisamos criar uma programação para isso. Neste exemplo criaremos um pequeno código em JavaScript para que o output funcione de fato. Vamos implementar um pequeno JavaScript em nosso formulário para que o elemento <strong>output</strong> possa funcionar pelenamente.</p>
+            <form action="cadastro.php" method="get" autocomplete="on">
+                <fieldset>
+                    <legend>Calculo de Valores</legend>
+                    <p>
+                       <label for="in3">Número 1:</label> <input type="number" name="n3" id="in3" min="0"	max="50" required oninput="isoma2.innerHTML = Number(in3.value) + Number(in4.value)">
+                    </p>
+                    <p>
+                        <label for="in4">Número 2:</label><input type="number" name="n4" id="in4" min="0" max="50" required oninput="isoma2.innerHTML = Number(in3.value) + Number(in4.value)">
+                    </p>
+                    <p>
+                        <label for="isoma2">Soma=</label> <output name="soma2" id="isoma2">0</output>
+                    </p>
+                </fieldset>
+                <p><input type="reset" value="Limpar">
+                <input type="submit" value="Enviar"></p>
+            </form>
+            <p>Agora sim, o formulário de calculo de valores está funcionando plenamente. Além de criar um pequeno script em JavaScript, também precisamos dar um<strong> label</strong> e um <strong>id</strong> para a tag output, pois conforme vimos esses são atributos que tornam o elemento integrado ao formulário e permitem melhor interação inclusive para aplicação de scripts.   </p>
+            <p>Vamos a mais um exemplo utilizando outra operação matemática:</p>
+
+            <form action="cadastro.php" method="post" autocomplete="on">
+                <fieldset>
+                    <legend>Calculo de Valores</legend>
+                
+                <p>
+                   <label for="in5">Número 1:</label> <input type="number" name="
+                    n5" id="in5" min="0" max="50" required oninput="imult.innerHTML = Number(in5.value) * Number(in6.value)">
+                </p>
+                <p>
+                   <label for="in6">Número 2:</label> <input type="number" name="n6" id="in6" min="0" max="50" required oninput="imult.innerHTML = Number(in5.value) * Number(in6.value)">
+                </p>
+                <p>
+                    Multiplicação= <output name="mult" id="imult">0</output>
+                </p></fieldset>
+                <p>
+                    <input type="reset" value="Limpar">
+                    <input type="submit" value="Enviar">
+                </p>
+            </form>
+            <p>Uma observação importante sobre o envio de formulário com output, é que o resultado do calculo não será enviado com os dados do formulário. Isso acontece porque a função do output é apenas exibir o resultado  na interface do usuário. Se você deseja incluir o conteúdo de um elemento output específico como parte dos dados do formulário ao enviá-lo, você precisará manipular isso usando JavaScript. </p>
+            <h3>Exibindo o valor do range com output</h3>
+
+            <p>Como  o <strong>output</strong> é um elemento que pode ser usado para apresentar na tela o resultado ou a saida de alguma interação feita pelo usuário, vamos usa-lo em parceria com outro elemento de formulário que já consideramos antes. Na <a href="form004.html">pagina anterior</a> consideramos o elemento <strong>range</strong>    que é utilizado para criar um controle deslizante (slider) em formulários HTML. Permitindo que os usuários selecionem um valor de um intervalo específico, ajustando um botão deslizante horizontalmente. No entanto, o usuário não conseguia ver qual era o valor definido. Agora, vamos usar um pequeno script em associação com um <strong>output</strong> para tornar a saida do range visível na interface do usuário. Veja o próximo exemplo e seu respectivo coódigo fonte:   </p>
+            <form action="cadastro.php" method="post" autocomplete="on">
+                <fieldset>
+                    <legend>range com output</legend>
+                <p>
+                Nota:<input type="range" name="avaliacao" id="iavaliacao" min="0" max="10" value="5" oninput="nota.innerHTML = Number(iavaliacao. value)">
+                <output name="val" id="nota">5
+
+                </p></output>
+                 </fieldset>
+                <p>
+                    <input type="reset" value="Limpar">
+                    <input type="submit" value="Enviar">
+                </p>
+            </form>
+            <p>Para praticar um pouco mais, vamos fazer outro formulário usando os mesmos princípios.</p>
+            <form action="cadastro.php" method="post" autocomplete="on">
+                <fieldset>
+                    <legend>range com output</legend>
+
+                    <p>
+                        Volume: <input type="range" name="volume" id="ivolume" min="0" max="100" value="20" oninput="vol.innerHTML = Number(ivolume.value)">
+                    <output id="vol">20</output>
+                </p>
+
+                </fieldset>
+                <p>
+                    <input type="reset" value="Limpar">
+                    <input type="submit" value="Enviar">
+                </p>
+            </form>
+            
+
+        </section>
+        
+    </main>
+    <footer>
+        <p>Página criada por Adriano Silva durante o Módulo 4 do Curso de HTML5 e CSS3.</p>
+    </footer>
+    
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+    <link rel="stylesheet" href="estilos/estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Criando Formulários</h1>
+        <h2>
+            Controles de Formulários
+        </h2>
+
+    </header>
+    <nav>
+        <a href="form001.html">Home</a>
+        <a href="form002.html">Página 2</a>
+        <a href="#"> Página 3</a>
+         <a href="form004.html">Página 4</a>
+         <a href="form005.html">Página 5</a>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Radio e Checkbox button</h2>
+            <p>Em muitas situações precisamos criar um formulário com campos de multiplas escolhas. Nestes casos podemos usar o input do tipo <strong>"checkbox"</strong>. Este elemento é utilizado em formulários HTML para criar caixas de seleção. As caixas de seleção permitem que os usuários selecionem ou desselecionem uma ou mais opções de um conjunto. Vejamos um exemplo:</p>
+
+            <form action="cadastro.php" method="post" autocomplete="on">
+
+                <fieldset>
+                    <legend>Esportes Favoritos</legend>
+                    <input type="checkbox" name="futebol" id="ifutebol"><label for="ifutebol">Futebol</label> <br>
+                    <input type="checkbox" name="basquete" id="ibasquete"> <label for="ibasquete">Basquete</label> <br>
+                    <input type="checkbox" name="volei" id="ivolei"><label for="ivolei"> Vôlei</label> <br>
+                    <input type="checkbox" name="tenis" id="itenis"><label for="itenis"> Tênis</label>
+                </fieldset>
+                
+                <p>
+                    <input type="reset" value="Limpar">
+                    <input type="submit" value="Enviar">
+                </p>
+            </form>
+             <p> Em outras situações, podemos permitir que o susuário selecione apenas uma opção. Nestes casosutilizamos o elemento <strong>"radio"</strong>. 
+                O elemento input com o atributo <strong>type="radio"</strong> é utilizado em formulários HTML para criar botões de opção, também conhecidos como botões de rádio. Esses botões são usados quando você deseja que o usuário escolha exatamente uma opção de um conjunto.</p>
+                <p>Ao contrário das caixas de seleção <strong>input type="checkbox"</strong>,(<input type="checkbox">) os botões de opção <strong>input type="radio"</strong> (<input type="radio">) são exclusivos dentro do mesmo grupo, o que significa que apenas uma opção pode ser selecionada. Isso é útil quando você tem um conjunto de opções mutuamente exclusivas e deseja que o usuário escolha apenas uma delas. Vamos ver a aplicação deste elemento:</p>
+                <form action="cadastro.php" method="post" autocomplete="on">
+                    <fieldset>
+                        <legend>Sexo</legend>
+                        <input type="radio" name="masc" id="imasc"><label for="imasc"> Masculino</label> <br>
+                        <input type="radio" name="fem" id="ifem"> <label for="ifem">Feminino</label> <br>
+                        <input type="radio" name="ndc" id="indc"> <label for="indc">Não declarar </label><br>
+                    </fieldset>
+                </form>
+
+                <form action="cadastro.php" method="post" autocomplete="on">
+                    <fieldset>
+                        <legend>Esportes Favoritos</legend>
+                    <input type="checkbox" name="Futebol" id="ifutebol2"><label for="ifutebol2"> Futebol <br></label>
+                    <input type="checkbox" name="basquete" id="ibasquete2"> <label for="ibasquete2">Basquete</label> <br>
+                    <input type="checkbox" name="volei" id="ivolei2"> <label for="ivolei2">Vôlei </label><br>
+                    <input type="checkbox" name="tenis" id="itenis2"> <label for="itenis2">Tênis</label>
+                    
+                    </fieldset>
+                    <p>
+                        <input type="reset" value="Limpar">
+                        <input type="submit" value="Enviar">
+                    </p>
+                </form>
+
+                <p>Tavez você tenha notado que há um problema com o campo de Sexo, visto que ele está permitindo selecionar mais de uma opção. Para resolver isso, devemos ter os seguintes cuidados ao definir os controles para o elemento radio: diferente dos demais elementos considerados até aqui, o elemento radio <strong>deve ter o name igual para todos os inputs</strong>. Neste caso, o <strong>name</strong> definido <strong>será sexo</strong> e o <strong>id</strong> segue <strong>conforme o padrão</strong>, ou seja <strong>um id para cada opção</strong>.
+                Veja o código fonte e o resultado destas alteracões.</p>
+                <form action="cadastro.php" method="post" autocomplete="on">
+                    <fieldset>
+                        <legend>Sexo</legend>
+                        <input type="radio" name="sexo" id="masc2"> <label for="masc2">Maculino</label> <br> 
+                        <input type="radio" name="sexo" id="fem2"> <label for="fem2">Feminino </label><br>
+                        <input type="radio" name="sexo" id="ndc2"> <label for="ndc2">Não declarar</label>
+                    </fieldset>
+                   
+                </form>
+                <form action="cadastro.php" method="post" autocomplete="on">
+                    <fieldset>
+                        <legend>Esportes Favoritos</legend>
+                        <input type="checkbox" name="futebol3" id="ifutebol3"> <label for="ifutebol3">Futebol </label><br>
+                        <input type="checkbox" name="basquete3" id="ibasquete3"> <label for="ibasquete3">Basquete</label> <br>
+                        <input type="checkbox" name="volei3" id="ivolei3"> <label for="ivolei3">Vôlei</label> <br>
+                        <input type="checkbox" name="tenis3" id="itenis3"> <label for="itenis3">Tênis</label>
+                    </fieldset>
+                    <p>
+                        <input type="reset" value="Limpar">
+                        <input type="submit" value="Enviar">
+                    </p>
+                </form>
+                <h2>Checked</h2>
+                <p>Algo interessante que podemos incluir em nossos formulários é pré definir algumas opções como selecionado ou marcado. Ao fazer isso podemos definir previamente algumas opcões que podem ser mantidas ou alteradas pelo usuário. Para esse resultado usamos a propriedade <strong>Checked</strong> .Vejamos novamente o mesmo formulário com este implemento. </p>
+                <form action="cadastro.php" method="post" autocomplete="on">
+                    <fieldset>
+                        <legend>Sexo</legend>
+                        <input type="radio" name="sexo" id="masc3"> <label for="masc3">Masculino</label> <br>
+                        <input type="radio" name="sexo" id="fem3"> <label for="fem3">Feminino</label> <br>
+                        <input type="radio" name="sexo" id="ndc3" checked> <label for="ndc3">Não declarar</label>
+                    </fieldset>
+                </form>
+                <form action="cadastro.php" method="post" autocomplete="on">
+                    <fieldset>
+                    <legend>Esportes Favoritos</legend>
+                    <input type="checkbox" name="futebol4" id="ifutebol4" checked> <label for="ifutebol4">Futebol</label> <br>
+                    <input type="checkbox" name="basquete4" id="ibasquete4"> <label for="ibasquete4">Basquete</label> <br>
+                    <input type="checkbox" name="volei4" id="ivolei4" checked> <label for="ivolei4">Vôlei</label> <br>
+                    <input type="checkbox" name="tenis4" id="itenis4"> <label for="itenis4">Tênis</label>
+                    </fieldset>  
+                    <p><input type="reset" value="Limpar">
+                    <input type="submit" value="Enviar"></p>
+                </form>
+                <p>Veja que no campo de <strong>sexo</strong> a opção <strong>"Não declarar"</strong> já estava definida. No campo de <strong>Esportes Favoritos</strong>, foram marcadas as opções <strong>"Futebol"</strong> e <strong>"Vôlei."</strong> É importante saber que no caso do radio só podemos usar um checked, visto que este controle serve para definir uma única opção.  Lembrando que em todos os casos, mesmo quando esta opção está pré definida, ela pode ser alterada pelo usuário normalmente.</p>
+                <h2>value</h2>
+                <p>Agora vamos considerar um atributo que pode passar despercebidos quando criamos os campos radio e checkbox em formulários, o atributo <strong>"value"</strong>. Embora o atributo <strong>value</strong> no elemento <strong>input type="radio"</strong> <input type="radio"> não seja estritamente necessário para o funcionamento básico dos botões de opção, é uma prática recomendada incluí-lo por algumas razões:</p>
+                <p><strong>"Transferência de Dados:"</strong>  Quando um formulário é enviado para o servidor, apenas os valores associados aos botões de opção selecionados são enviados. Se você não tiver um atributo value, não haverá um valor específico para o botão de opção escolhido, tornando mais difícil para o servidor entender qual opção foi selecionada.</p>
+
+                <p><strong>"JavaScript e Estilo:"</strong> Se você estiver usando JavaScript para manipular os valores dos botões de opção ou aplicando estilos com base nas seleções, ter um valor associado facilita essas operações. O valor pode ser acessado e manipulado de forma mais direta usando JavaScript.</p>
+                <p><strong>" Semântica e Clareza:"</strong>Incluir valores nos botões de opção torna o código mais semântico e claro para outros desenvolvedores que possam revisar seu código. Eles podem entender facilmente quais são as opções disponíveis e como os valores estão sendo usados.</p>
+
+                <p>Embora o valor padrão seja o próprio texto dentro da tag <strong>label</strong>, incluir explicitamente um valor fornece um controle mais preciso e é uma prática recomendada para desenvolvimento web consistente e compreensível. Veja o código fonte para perceber a aplicação deste atributo no exemplo abaixo</p>
+                <form action="cadastro.php" method="post" autocomplete="on">
+                    <fieldset>
+                        <legend>Sexo</legend>
+                        <input type="radio" name="sexo" id="imasc4" value="M"> <label for="imasc4">Masculino </label><br>
+                        <input type="radio" name="sexo" id="ifem4" value="F"> <label for="ifem4">Feminino </label><br>
+                        <input type="radio" name="sexo" id="indc4" checked value="NDC"> <label for="indc4">Não declarar</label>
+                    </fieldset>
+                </form> 
+                <form action="cadastro.php" method="post" autocomplete="on">
+                    <fieldset>
+                        <legend>Esportes Favoritos</legend>
+                        <input type="checkbox" name="futebol5" id="ifutebol5" checked value="FUT"> <label for="ifutebol5">Futebol</label> <br>
+                        <input type="checkbox" name="basquete5" id="ibasquete5" value="BASQ"> <label for="ibasquete5">Basquete</label> <br>
+                        <input type="checkbox" name="volei5" id="ivolei5" checked value="VOL"> <label for="ivolei5">Vôlei</label> <br>
+                        <input type="checkbox" name="tenis5" id="itenis5" value="TEN"> <label for="itenis5">Tênis</label>
+                    </fieldset>
+                    <p>
+                        <input type="reset" value="Limpar">
+                        <input type="submit" value="Enviar">
+                    </p>
+                </form>  
+        </section>
+    </main>
+
+    <footer>
+        <p>Página criada por Adriano Silva durante o Módulo 4 do Curso de HTML5 e CSS3.</p>
+    </footer>
+    
+</body>
+</html>

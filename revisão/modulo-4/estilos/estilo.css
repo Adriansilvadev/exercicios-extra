@@ -75,6 +75,10 @@ h1 {
     text-align: center;
     margin: 10px;
 }
+fieldset {
+    padding: 10px;
+    text-indent: 0px;
+}
 footer {
     padding: 1px;
     text-align: center;

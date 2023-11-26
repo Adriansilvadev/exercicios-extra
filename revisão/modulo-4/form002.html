@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+    <link rel="stylesheet" href="estilos/estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Criando Formulários</h1>
+        <h2>
+            Controles de Formulários
+        </h2>
+    </header>
+    <nav>
+        <a href="form001.html">Home</a>
+        <a href="#">Página 2</a>
+        <a href="form003.html"> Página3</a>
+        <a href="form004.html">Página 4</a>
+        <a href="form005.html">Página 5</a>
+    </nav>
+    
+    <main>
+        <section>
+            <h1>Especificidades </h1>
+            <p>Vamos ver algumas especificidades de alguns inputs que tornarão o preenchimento de formulários mais interessante. Nos exemplos a seguir veremos situaçòes em que deveremos preencher os campos com informaçoes especificas, e não conseguiremos inserir qualquer outra informação.
+            </p>
+        </section>
+        <section>
+            <h2>"number"</h2>
+           <p>O input especial <strong>"number"</strong> tem uma caracteristica interessante, visto torna o campo especifico para o preenchimmento de numeros e os caracteres que acompanham os números como traços, pontos e virgulas.Neste caso não conseguimos colocar letras. Para isso definimos o <strong>"type"</strong> do input como <strong>"number"</strong>. Veja isso ao observar o código fonte e o exemplo a seguir: </p>
+            <form action="cadastro.php" method="post" autocomplete="on">
+                <p><label for="inomenu">Nome</label>
+                    <input type="text" name="nomenu" id="inomenu" autocomplete="name" placeholder="Nome Completo" maxlength="30" size="20" required>
+                </p>
+                <p><label for="imedianu">Média</label>
+                    <input type="number" name="medianu" id="imedianu" placeholder="0 a 10" required>
+                </p>
+                
+                <p><input type="reset" value="Limpar">
+                <input type="submit" value="Enviar"></p>
+            </form>
+            <p>Analisando um pouco mais o formulário acima, percebemos a necessidade de fazer um ajuste no campo de Média, visto que este é um tipo de dado que tem um número limitado de caracteres. Para isso usaremos os atributos, <strong>"min"</strong> com o valor <strong>"0"</strong> e <strong>"max"</strong> com o valor <strong>"10"</strong>. Visto que uma média pode variar em decimos de  um número também definimos qual será o passo, para isso usamos o atributo <strong>"step"</strong>, com o valor <strong>"0.1"</strong>.</p>
+            <form action="cadastro.php" method="post" autocomplete="on">
+                <p><label for="inomenu2">Nome</label>
+                    <input type="text" name="nomenu2" id="inomenu2" autocomplete="name" placeholder="Nome Completo" maxlength="30" required>
+                </p>
+                <p><label for="imedianu2">Média</label>
+                    <input type="number" name="medianu2" id="imedianu2" placeholder="0 a 10" min="0" max="10" step="0.1" maxlength="4" required>
+                </p>
+                <p><input type="reset" value="Limpar">
+                <input type="submit" value="Enviar"></p>
+            </form>
+            <h2>month</h2>
+            <p>Outro controle que pode ser bastante util em formulários é o atributo <strong>"month"</strong>. Ele cria um campo no formulário em que o usuário pode definir uma data. Veja como isso fica a seguir: </p>
+            <form action="cadastro.php" autocomplete="on" method="post">
+                <p><label for="inomemon">Nome</label>
+                    <input type="text" name="nomemon" id="inomemon" maxlength="30" placeholder="Nome Completo" autocomplete="username" required>
+                </p>
+                <p><label for="imediamon">Média</label>
+                    <input type="number" name="mediamon" id="imediamon" min="0" max="10" step="0.1" placeholder="0 a 10" required>   
+                </p>
+                <p><label for="iperiodo">Periodo Letivo</label>
+                    <input type="month" name="periodo" id="iperiodo" required>
+                </p>
+                <input type="reset" value="Limpar">
+                <input type="submit" value="Enviar">
+            </form>
+                <p>Algo interessante que podemos fazer ao criar formulários é sugerir um dado para o campo a ser preenchido. Por exemplo: Digamos que queremos que o campo média já comece com o valor de "5". Para isso usamos o atributo <strong>"value"</strong>. Isso pode ser feito também com outros, campos como por exemplo o campo de periodo letivo. Veja como isso fica na prática.</p>
+            <form action="cadastro.php" method="post" autocomplete="on">
+                <p><label for="inomemon2">Nome</label>
+                    <input type="text" name="nomemom2" id="inomemon2" maxlength="30" autocomplete="username" placeholder="Nome Completo" required>
+                </p>
+                <p><label for="imediamon2">Média</label>
+                    <input type="number" name="mediamon2" id="imediamon2" min="0" max="10" step="0.1" value="5.0" required>
+
+                </p>
+                <p><label for="iperiodomon2">Periodo Letivo</label>
+                    <input type="month" name="periodomon2" id="iperiodomon2" value="2023-11" required>
+                </p>
+                <p><input type="reset" value="LImpar">
+                <input type="submit" value="Enviar"></p>
+            </form>
+            <p>É claro que a principio pode parecer pouco prático sugerir dados, especialmente se os dados a serem sugeridos se referem a informações condicionais como datas e outros dados que podem não ser constantes. Mas isso pode ser facilmente resolvido por implementar alguns scripts no formulário.</p>
+            <p>Ainda no campo de periodo letivo podemos permitir que seja incluido não apenas o mês mas tambem a data completa e até mesmo a hora. Isso também pode ser automatizado usando JavaScript. Para o campo de data completa usamos o atributo <strong>"date"</strong> e para o campo de hora usamos o atributo <strong>"time"</strong>. Veja o rsultado abaixo.</p>         
+            <form action="cadastro.php" method="post" autocomplete="on">
+                <p><label for="inomedt">Nome</label>
+                    <input type="text" name="nomedt" id="inomedt" maxlength="30" autocomplete="username" placeholder="Nome Completo" required>
+
+                </p>
+                <p><label for="imediadt">Média</label>
+                    <input type="number" name="mediadt" id="imediadt" min="0" max="0" step="0.1" value="5.0" required>
+                </p>
+                <p><label for="iperiodomon3">Periodo letivo</label>
+                    <input type="month" name="periodomon3" id="iperiodomon3" value="2023-11">
+                </p>
+                <p><label for="idata">Data da Prova</label>
+                    <input type="date" name="data" id="idata" required value="20203-11-15">
+                </p>
+                <p><label for="ihora">Horário da Prova</label>
+                    <input type="time" name="hora" id="ihora" value="13:00">
+                </p>
+                <p><input type="reset" value="Limpar">
+                <input type="submit" value="Enviar"></p>
+            </form>
+            <p>Veja que neste caso também defini um <strong>"value"</strong> para o horário. Existem bastante controles de formulários e por isso precisamos verificar o funcionamento deles de acordo com as necessidades e circunstancias. Além disso existe a questão de compatibilidade entre navegadores e dispositivos. Por isso, é importante testar cada implementação feita, em diferentes navegadores e dispositivos. </p>
+            <h2>email e tel</h2>
+            <p>Dois elementos que aparecem com muita frequência em formulários é o email e o número de telefone.Para incluir estes campos, nós usamos os inputs <strong>"email"</strong> e <strong>"tel"</strong>. Assim como nos demais casos, estes inputs permitem alguns controles, mas no caso do input "tel" temos algumas dificuldades para determinar alguns controles. Por isso, será preciso usar uma expresão regular (RegEx) para se obter o resultado esperado. Para isso usamos o controle <strong>"pattern"</strong></p>
+            <p>Também podemos incluir um <strong>"placeholder"</strong> para indicar ao usuário o formato do preenchimento.  Vejamos a implementacão destes campos no formulário a seguir:</p>
+            <form action="cadastro.php" method="post" autocomplete="on">
+                <p><label for="inometel">Nome</label>
+                    <input type="text" name="Nometel" id="inometel" maxlength="30" autocomplete="username" required placeholder="Nome Completo">
+                </p>
+                <p><label for="iemail">Email</label>
+                    <input type="email" name="email" id="iemail" autocomplete="email" required placeholder="nome@email.com">
+                </p>
+                <p><label for="itelefone">Telefone</label>
+                    <input type="tel" name="telefone" id="itelefone" autocomplete="tel" pattern="^\(\d{2}\)\d{4,5}-\d{4}$" placeholder="(xx) xxxx-xxxx" >
+                </p>
+                <p><input type="reset" value="Limpar">
+                <input type="submit" value="Enviar"></p>
+            </form>
+
+            <h2>fieldset</h2>
+            <p>De modo geral, sempre que criamos um formulário, costumammos agrupar informacões semelhantes na mesma área,  como por exemplo dados pessoais. Isso torna o preenchimento de formulários mais prático e interessante. Com essa finalidade podemos fazer o agrupamento desses campos envelopando-os com a tag <strong>"fieldset"</strong> (agrupamento de campos) e incluir a tag <strong>"legend"</strong> para dar um nome ou título para o grupo de dados. Vejamos isso no formulário abaixo:</p>
+            <fieldset>
+                <legend>Dados Pessoais </legend>
+                <form action="cadastro.php" method="post" autocomplete="on">
+                    <p><label for="inomefldst">Nome</label>
+                        <input type="text" name="nomefldst" id="inomefldst" autocomplete="username" maxlength="30" required placeholder="Nome Completo">
+                    </p>
+                    <p><label for="itelefonefldst">Telefone</label>
+                        <input type="tel" name="telefonefldst" id="itelefonefldst" required pattern="^\d{4}-\d{4}$" autocomplete="tel" required placeholder="xxxx-xxxx">
+                    </p>
+                    <p><label for="iemailfldst">Email</label>
+                        <input type="email" name="emailfldst" id="iemailfldst" autocomplete="email" required placeholder="seuemail@email.com">
+                    </p>
+                    <input type="reset" value="Limpar">
+                    <input type="submit" value="Enviar">
+                </form>
+            </fieldset>
+        </section>   
+    </main>
+   
+
+    <footer>
+        <p>Página criada por Adriano Silva durante o Módulo 4 do Curso de HTML5 e CSS3.</p>
+    </footer>
+    
+</body>
+</html>

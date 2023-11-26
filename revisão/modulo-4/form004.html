@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+    <link rel="stylesheet" href="estilos/estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Criando Formulários</h1>
+        <h2>
+            Controles de Formulários
+        </h2>
+
+    </header>
+    <nav>
+        <a href="form001.html">Home</a>
+        <a href="form002.html">Página 2</a>
+        <a href="form003.html"> Página 3</a>
+        <a href="#">Página 4</a>
+        <a href="form005.html">Página 5</a>
+    </nav>
+    <main>
+        <section>
+            <h2>color</h2>
+           <p>O <strong>input type="color"</strong> é usada para criar um controle de seleção de cor em formulários HTML5. Esse controle permite que os usuários escolham uma cor usando uma interface específica para a seleção de cores.</p>
+            <form action="cadastro.php" method="post" autocomplete="on">
+                <fieldset>
+                    <legend>Seleção de Cores</legend>
+                    <p><label for="icor">1ªCor:</label>     <input type="color"name="cor" id="icor" value="#0000ff"></p>
+                    <p><label for="icor2">2ª Cor</label>
+                    <input type="color" name="cor2" id="icor2" value="#ff533a">
+                    </p>
+                    <p><label for="icor3">3ª Cor</label>
+                    <input type="color" name="cor3" id="icor3"value="#15ff11"></p>
+                </fieldset>
+                <p>
+                    <input type="reset" value="Limpar">
+                    <input type="submit" value="Enviar">
+                </p>
+            </form>
+            <p>Note que as cores iniciais foram, azul verde e vernelho. Isso foi definido atrvés do atributo <strong>"value"</strong> usando os códigos hexadecimais <strong>#0000ff</strong>, <strong>#ff533a</strong> e <strong>#15ff11</strong>. Lembrando mais uma vez que isso pode ser alterado pelo usuário de acordo com suas preferências. </p>
+
+            <h2>range</h2>
+            <p>O <strong>input type="range"</strong>, <input type="range"> é utilizado para criar um controle deslizante (slider) em formulários HTML. Esse tipo de controle permite que os usuários selecionem um valor de um intervalo específico, ajustando um botão deslizante horizontalmente. Vejamos o que podemos fazer com este input no exemplo abaixo:</p>
+
+            <form action="cadastro.php" method="post" autocomplete="on">
+                <fieldset>
+                    <legend>Seleção de Cores</legend>
+                    <p> 1ªCor:
+                        <input type="color" name="cor4" id="icor4" value="#16ffec">
+                    </p>
+                    <p> 2ªCor:
+                        <input type="color" name="cor5" id="icor5" value="#ff99b9">
+                    </p> 
+                    <p> 3ªCor:
+                        <input type="color" name="cor6" id="icor6" value="#b800c0">
+                    </p>
+                </fieldset>
+               <p> <input type="reset" value="Limpar"> 
+                <input type="submit" value="Enviar"></p>
+            </form>
+
+            <form action="cadastro.php" method="get" autocomplete="on">
+                <fieldset>
+                    <legend>Nível de Satifação</legend>
+                    <p> Arraste <input type="range" name="nivel" id="inivel" min="0" max="10" value="9"></p>
+                </fieldset>
+                <p>
+                    <input type="reset" value="Limpar">
+                    <input type="submit" value="Enviar">
+                </p>
+            </form>
+            <p>Para este formulário usamos os atributos já conhecidos de <strong>value</strong> para definir as cores e o valor inicial do <strong>range</strong> e também o <strong>min</strong> e<strong> max </strong>para definir o menor e maior valor para o <strong>range</strong></p>
+
+            <h2>file</h2>
+            <p>O elemento <strong>input type="file"</strong>  <input type="file">  é usado em formulários HTML para permitir que os usuários escolham e enviem arquivos para o servidor. Este tipo de input cria um botão de seleção de arquivo ou uma área de arrastar e soltar, dependendo do navegador. Veja o exemplo a seguir:</p>
+            <form action="cadastro.php" method="post" autocomplete="on">
+                <p><label for="ifoto">Foto do Perfil</label>:<input type="file" name="foto" id="ifoto"></p>
+                <p><input type="reset" value="Trocar imagem">
+                <input type="submit" value="Enviar"></p>
+            </form>
+            <p>Um lembrete importante sobre o uso do input <strong>"file"</strong>, é que o método de envio deve ser sempre o <strong>method="POST"</strong> visto que no <strong>method="GET"</strong> o limite de dados é de apenas 3 mil bytes.</p>
+        </section>
+        <section>
+            <h1>Outros controles de formulários</h1>
+            <p>Conforme ficou eveidente até aqui, a tag input é  um controle muito importante na criação de formulários,já vimos vario tipos desta tag, mas convem dizer que não consideramos nem consideraremos todos os tipos disponíveis, mas abordamos as principais. A partir de agora vamos dar atenção a outros tipos de controles muito utilizados na criação de formulários.</p>
+
+            <h2>seclect</h2>
+
+            <p>A tag  <strong>"select"</strong>  em HTML é usada para criar<strong> caixas de seleçã</strong>o (também conhecidas como <strong>dropdowns)</strong> em formulários. Essas caixas de seleção permitem que os usuários escolham uma opção de uma lista predefinida. Vamos ver como podemos usar esta tag nos exemplos a seguir:</p>
+
+            <form action="cadastro.php" method="post" autocomplete="on">
+                <fieldset>
+                    <legend>Estados do Brasil</legend>
+                    <p>
+                        Estado <select name="est" id="iest"></select>
+                    </p>
+                </fieldset>
+                <p>
+                    <input type="reset" value="Limpar">
+                    <input type="submit" value="Enviar">
+                </p>
+            </form>
+            <p>Conforme notado no exemplo a tag <strong>"select"</strong> cria um tipo de lista expansiva, mas conforme notado não há itens nesta lista. isso acontece porque precisamos adicionar as opções para a tag "select". Para isso adicionamos a tag  <strong>"option"</strong>  dentro da tag "select ". Para cada item da lista adicionamos uma option com o <strong>"value" </strong> correspondente. Veja o código fonte para perceber como completamos esta lista com as opções necessárias para obter o resultado a seguir:</p>
+
+            <form action="cadastro.php" method="post" autocomplete="on">
+                <fieldset>
+                    <legend>Estados do Brasil</legend>
+                    <select name="est2" id="iest2">
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="ES">Espirito Santo </option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option> 
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                        <option value="DF">Distrito Federal</option>
+                    </select>
+                </fieldset>
+                <p>
+                    <input type="reset" value="Limpar">
+                    <input type="submit" value="Enviar">
+                </p>
+            </form>
+            <p>Mais uma vez notamos o uso do atributo <strong>value</strong> ao definir as opções para a lista de estados. Embora as siglas de cada estado sejam conhecidas, e até conseguimos vêlas ao consultar o código fonte, elas não ficam visiveis na interface do usuário. Mesmo assim, é importnate usarmos este atributo visto que é ele que define o valor que será enviado ao servidor quando o formulário for submetido. Este valor muitas vezes é usado para identificar a opção selecionada. O uso do atributo <strong>value </strong>também permite que você defina valores específicos que podem ser diferentes do texto visível para os usuários. Isso é útil quando o texto visível deve ser amigável para os usuários, enquanto o valor é usado internamente para identificação ou processamento.</p>
+            <h2>optgroup</h2>
+            <p>A tag<strong>" optgroup "</strong> em HTML é usada para agrupar as opções relacionadas dentro de um elemento <strong>"select"</strong>. Isso é útil quando você tem uma lista de opções que pode ser dividida em categorias ou seções. Vamos aplicar esta tag usando o mesmo exemplo da lista anterior mas desta vez vamos agrupar os estados por região. Mais uma vez consulte o código fonte para notar como o resultado foi obtido.</p>
+            <form action="cadastro.php" method="post" autocomplete="on">
+                <fieldset>Estados do Brasil por Região
+                    <select name="est3" id="iest3">
+                        <optgroup label="Região Norte">
+                            <option value="AC">Acre</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="PA">Pará</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="TO">Tocantins</option>
+                        </optgroup>
+                    </select>  <br>
+                    <select name="est4" id="ìest4">
+
+                        <optgroup label="Região Nordeste">
+                            <option value="AL">Alagoas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="SE">Sergipe</option>
+                        </optgroup>
+                    </select>
+                    <select name="est5" id="iest5">
+
+                        <optgroup label="Região Centro-Oeste" >
+                            <option value="GO">Goiás</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="DF">Distrito Federal</option>
+                        </optgroup>
+                    </select>
+                    <select name="est6" id="iest6">
+                        <optgroup label="Região Sudeste">
+                        <option value="ES">Espirito Santo </option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="RJ">Rio de Janeiro</option> 
+                        <option value="SP">São Paulo</option></optgroup>
+                    </select>
+                    <select name="est7" id="iest7">
+                        <optgroup label="Região Sul"></optgroup>
+                        <option value="PR">Paraná</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="SC">Santa Catarina</option>
+                    </select>
+
+                </fieldset>
+                 <p><input type="reset" value="Limpar">
+                <input type="submit" value="Enviar"></p>
+            </form>
+            <p>Conforme pode ser visto, dessa vez os estados estão agrupados por região. Isso foi feito através do envelopamento da tag <strong>"option"</strong> com a tag <strong> "optgroup"</strong>. Ao selecionar cada  uma das 5 listas acima, podemos notar que a região fica em destaque com letras em negrito e não pode ser selecionada na lista. Isso acontece porque o nome da região é na verdade o atributo<strong> "label"</strong>. Lembrando que esse <strong>label</strong> é diferente do <strong>label elemento</strong> que utilizamos para associar um rótulo descritivo a um elemento de formulário, como um campo de entrada <strong>(input)</strong>, uma caixa de seleção <strong>(select)</strong>, ou uma área de texto <strong>(textarea)</strong>. Essa associação é feita usando o <strong>atributo for na tag label</strong>, que deve ter o mesmo valor que o <strong>atributo id </strong>do elemento de formulário que está sendo rotulado. </p>
+           <h2> Selected </h2>
+           <p>Outra coisa interessante que podemos fazer usando a tag select quando temos várias opções é definir um elemento para iniciar pré selecionado. Vejamos o mesmo exemplo aplicando uma pré seleção para cada região;</p>
+           <form action="cadastro.php" method="post" autocomplete="on">
+            <fieldset>Estados do Brasil por Região
+                <select name="est3" id="iest3">
+                    <optgroup label="Região Norte">
+                        <option value="AC">Acre</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM" selected>Amazonas</option>
+                        <option value="PA">Pará</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="TO">Tocantins</option>
+                    </optgroup>
+                </select>  <br>
+                <select name="est4" id="ìest4">
+
+                    <optgroup label="Região Nordeste">
+                        <option value="AL">Alagoas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="SE" selected>Sergipe</option>
+                    </optgroup>
+                </select>
+                <select name="est5" id="iest5">
+
+                    <optgroup label="Região Centro-Oeste" >
+                        <option value="GO">Goiás</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="DF" selected>Distrito Federal</option>
+                    </optgroup>
+                </select>
+                <select name="est6" id="iest6">
+                    <optgroup label="Região Sudeste">
+                    <option value="ES">Espirito Santo </option>
+                    <option value="MG" selected>Minas Gerais</option>
+                    <option value="RJ">Rio de Janeiro</option> 
+                    <option value="SP">São Paulo</option></optgroup>
+                </select>
+                <select name="est7" id="iest7">
+                    <optgroup label="Região Sul"></optgroup>
+                    <option value="PR">Paraná</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="SC" selected>Santa Catarina</option>
+                </select>
+
+            </fieldset>
+             <p><input type="reset" value="Limpar">
+            <input type="submit" value="Enviar"></p>
+        </form>
+        <p>Também podemos deixar o campo de ecolha vazio ou com uma mensagem dizendo para o visitante escolher. Neste caso definimos esta opção como o <strong>selected </strong>. Para nostrar essa possibilidade e apresentar o mesmo formulário de outra maneira vamos unir todos os <strong>selects</strong> em um unico <strong>optgroup</strong>:</p>
+
+        <form action="cadastro.php" method="post" autocomplete="on">
+            <fieldset>Estados do Brasil por Região
+                <p>
+                    <label for="iest10">Estado</label>
+                    <select name="est10" id="iest10">
+                        <option value="" selected>---Escolha---</option>
+                        <optgroup label="Região Norte">
+                            <option value="AC">Acre</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="PA">Pará</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="TO">Tocantins</option>
+                        </optgroup>
+                    
+                        <optgroup label="Região Nordeste">
+                            <option value="AL">Alagoas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="SE">Sergipe</option>
+                        </optgroup>
+                    
+                        <optgroup label="Região Centro-Oeste" >
+                            <option value="GO">Goiás</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="DF">Distrito Federal</option>
+                        </optgroup>
+
+                        <optgroup label="Região Sudeste">
+                        <option value="ES">Espirito Santo </option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="SP">São Paulo</option></optgroup>
+
+                        <optgroup label="Região Sul"></optgroup>
+                        <option value="PR">Paraná</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="SC">Santa Catarina</option>
+                    </select>
+                </p>
+
+            </fieldset>
+             <p><input type="reset" value="Limpar">
+            <input type="submit" value="Enviar"></p>
+        </form>
+        <h2>datalist</h2>
+        <p>O elemento select é muito util quando temos uma lista de itens definidos, no entanto quando queremos permitir ao usuário inserir um item que não está listado, precisamos usar a tag <strong>"datalist"</strong> associada a um input do tipo text com um atributo de <strong>id</strong> fazendo esta ligação. Daí adicionamos o <strong>atributo list</strong> ao <strong>input text com o valor igual ao id da tag datalist</strong>.
+        Observe o resultado deste implemento abaixo e ao consultar o código fonte.  </p>
+        <form action="cadastro.php" method="post" autocomplete="on">
+            <fieldset>
+                <legend>
+                    Profissões 
+                </legend>
+                <label for="iprof">Selecione:</label>
+                <input type="text" name="prof" id="iprof" list="listprof">
+                <datalist id="listprof">
+                    
+                    <option value="ADM">Administrador</option>
+                    <option value="CONT">Contabilista</option>
+                    <option value="DEV">Desenvolvedor</option>
+                    <option value="PROF">Professor</option>
+
+                </datalist>
+            </fieldset>
+            <p>
+                <input type="reset" value="Limpar">
+                <input type="submit" value="Enviar">
+            </p>
+        </form>
+        <p>Podemos destacar 2 coisas interessantes sobre o uso da tag datalist. A primeira coisa é que o usu;ario pode inserir dados que não constam na lista crida e ela pode usar dados sugeridos pelo autopreencimento com o autocomplete.</p>
+        <h2>textarea</h2>
+        <p>A tag <strong>"textarea"</strong> em HTML é usada para criar uma área de texto editável em um formulário. Diferentemente da tag <strong>input type="text"</strong>, que é adequada para entradas de texto mais curtas, a <strong>"textarea"</strong> permite que os usuários insiram texto mais extenso, como em caixas de comentários ou mensagens.</p>
+        <p>A tag  <strong>"textarea"</strong> possui os seguintes atributos; O atributo <strong>"rows"</strong>  define o número visível de linhas na área de texto.O atributo <strong>"cols"</strong> define o número visível de colunas na área de texto. Vejamos um exemplo:</p>
+        <form action="cadastro.php" method="post" autocomplete="on">
+            <fieldset>
+                <legend>Área de texto.</legend>
+                <label for="imsg">Insira aqui seu texto:</label> <textarea name="msg" id="imsg" cols="30" rows="10" placeholder="Digite sua mensagem aqui..."></textarea>
+            </fieldset>
+            <p>
+                <input type="reset" value="Apagar">
+                <input type="submit" value="Enviar">
+            </p>
+        </form>
+        <p>Assim como no caso do <strong>"file"</strong>, quando criamos um formuláreo com <strong>"textarea"</strong> devemos usar o <strong>method="post".</strong> </p>
+        </section>
+    </main>
+    <footer>
+        <p>Página criada por Adriano Silva durante o Módulo 4 do Curso de HTML5 e CSS3.</p>
+    </footer>
+    
+</body>
+</html>

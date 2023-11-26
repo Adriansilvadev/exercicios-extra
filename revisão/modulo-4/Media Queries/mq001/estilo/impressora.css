@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+/* Estilo para impressoras*/
+
+*{
+    margin: 10px;
+    padding: 10px;
+}
+
+html{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.5em;
+    line-height: 1.5em;
+}
+
+menu {
+    display: none;
+}
+
+section {
+    width: 100vw;
+}
+
+footer {
+    display: none;
+}
+
+main::after {
+    content: 'Página impressa do exercício de Media Queries, feito por Adriano Silva, durante o Módulo 4 do Curso de HTML5 e CSS#.';
+}

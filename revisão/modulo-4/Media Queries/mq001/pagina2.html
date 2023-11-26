@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Querie</title>
+    <link rel="stylesheet" href="estilo/tela.css" media="screen">
+    <link rel="stylesheet" href="estilo/impressora.css" media="print">
+</head>
+<body>
+    <header>
+        <h1>Media Queries</h1>
+        <menu>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="#">Página 2</a>
+                <a href="">Página3</a>
+            </nav>
+        </menu>
+    </header>
+    <main>
+        <section>
+            <h2>Aplicando Media Queries</h2>
+        <p>
+            Agora vamos criar algumas Media Queries. Conforme você poderá perceber ao consultar o código fonte desta página, a criação de uma Media Querie na verdade , nada mais é do que a criação de um link para uma folha de estilos com um atributo determinante com o valor de acordo com o tipo desejado, podendo ser: <br>
+            <strong>media="screen"</strong> (telas), <br>
+            <strong>media="print"</strong> (impressão), <br> <strong>media="speech"</strong> Projetado para sintetizadores de fala, <br> 
+            <strong>media="projection</strong> "Projetado para apresentações projetadas, como slides, <br>
+            <strong>media="baraille</strong>" Projetado para dispositivos de leitura braille, <br>
+            <strong>media="embossed"</strong> Projetado para dispositivos de impressão tátil, <br>
+            <strong>media="tty"</strong> Projetado para dispositivos de teletipo, <br>
+            <strong>media="tv"</strong> Projetado para dispositivos de televisão, <br>
+            ou <strong>media="all"</strong> (todos os tipos de media)
+        </p>
+        <p>No código fonte dessa página, verifique a área de cabeça, onde você vai encontrar um link CSS  com a propriedade <strong>media="screen"</strong> e na sequência outro link CSS com a propriedade <strong>media="print"</strong>. Sendo que o primeiro<strong>(media="screen")</strong> definirá a aparência da página em telas, e o segundo  <strong>(media="print")</strong> definirá a aparência da página para impressão. </p>
+
+        <p>
+            Faça novamente o teste de impressão para notar a diferença. Aproveite e veja que após o ultimo parágrafo, não vai aparecer o rodapé mas vai aparecer outra informação que não está disponível nesta tela. Para isso usamos a pseudo elemnto ::after onde inserimos uma mensagem a ser exibida somente na impressão da página. Isso mostra como as Media Queries nos permitem estilizar a página para cada tipo de midia em que a Página será apresentada.
+        </p>
+
+        </section>
+
+    </main>
+    <footer>
+        <p>Página criada por Adriano Silva durante o Módulo 4 do Curso de HTML5 e CSS3.</p>
+    </footer>
+    
+</body>
+</html>

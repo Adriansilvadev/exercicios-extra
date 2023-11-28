@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Media Queries</title>
+    <link rel="stylesheet" href="estilo/style.css" media="all">
     <link rel="stylesheet" href="estilo/retrato.css" media="screen and (orientation: portrait)">
     <link rel="stylesheet" href="estilo/paisagem.css" media="screen and (orientation: landscape)" >
     <link rel="stylesheet" href="estilo/impressora.css" media="print">
-    <link rel="stylesheet" href="estilo/style.css" media="all">
+    
 </head>
 <body>
     <header>
@@ -17,53 +18,60 @@
                 <a href="index.html">Home</a>
                 <a href="pagina2.html">Página 2</a>
                 <a href="#">Página 3</a>
+                <a href="pagina4.html">Página 4</a>
             </nav>
         </menu>
     </header>
        <main>
         <section>  
-        <p><strong>Media features</strong> em CSS são condições específicas que você pode verificar em uma media query para aplicar estilos diferentes com base em características específicas do dispositivo ou da tela. Essas características podem incluir largura de tela, altura de tela, resolução, orientação, entre outras.</p>
-        <p>As <strong>media features</strong> permitem que você crie layouts responsivos e adapte o estilo de uma página da web com base nas características do dispositivo em que ela está sendo exibida. Aqui estão alguns exemplos de <strong>media features </strong>comuns:</p>
-       
-        <h3>Width (Largura):</h3>
-        <p>
-            <strong>min-width:</strong> A largura mínima da tela. <br>
-            <strong>max-width:</strong> A largura máxima da tela.
-        </p>
-        
-        <h3>Height (Altura):</h3>    
-        <p>
-            <strong>min-height:</strong> A altura mínima da tela. <br>
-            <strong>max-height:</strong> A altura máxima da tela.
-        </p>
-        
-        <h3>Device Width (Largura do dispositivo):</h3>    
-        <p>
-            <strong>min-device-width</strong>: A largura mínima do dispositivo. <br>
-            <strong>max-device-width:</strong> A largura máxima do dispositivo.
-        </p>
-
-        <h3>Device Height (Altura do dispositivo):</h3>    
-        <p>
-            <strong>min-device-height:</strong> A altura mínima do dispositivo. <br>
-            <strong>max-device-height:</strong> A altura máxima do dispositivo.
-        </p>
-
-        <h3>Orientation (Orientação):</h3>   
-        <p>
-            <strong>orientation: portrait:</strong> Retrato (altura maior que a largura). <br>
-            <strong>orientation: landscape: </strong>Paisagem (largura maior que a altura).
+            <p><strong>Media features</strong> em CSS são condições específicas que você pode verificar em uma media query para aplicar estilos diferentes com base em características específicas do dispositivo ou da tela. Essas características podem incluir largura de tela, altura de tela, resolução, orientação, entre outras.</p>
+            <p>As <strong>media features</strong> permitem que você crie layouts responsivos e adapte o estilo de uma página da web com base nas características do dispositivo em que ela está sendo exibida. Aqui estão alguns exemplos de <strong>media features </strong>comuns:</p>
+        </section>
+       <section id="mf">
+            <h3>Width (Largura):</h3>
+            <p>
+                <strong>min-width:</strong> A largura mínima da tela. <br>
+                <strong>max-width:</strong> A largura máxima da tela.
+            </p>
             
-        </p>
-        <h3>Resolution (Resolução):</h3>
-        <p>
-            <strong>min-resolution:</strong> A resolução mínima da tela ou dispositivo. <br>
-            <strong>max-resolution:</strong> A resolução máxima da tela ou dispositivo.
-        </p>
+            <h3>Height (Altura):</h3>    
+            <p>
+                <strong>min-height:</strong> A altura mínima da tela. <br>
+                <strong>max-height:</strong> A altura máxima da tela.
+            </p>
+            
+            <h3>Device Width (Largura do dispositivo):</h3>    
+            <p>
+                <strong>min-device-width</strong>: A largura mínima do dispositivo. <br>
+                <strong>max-device-width:</strong> A largura máxima do dispositivo.
+            </p>
 
-        <p>Dito de Maneira simples os <strong>media features</strong> fazem um ajuste fino nas propriedades dos media queries. Observe o código fonte na área da cabeça para notar a aplicação destas propriedades.</p>
-        <p> Perceba que para a aplicação de media features, adicionamos a propriedade <strong>and (orientation: portrait)</strong> entre parenteses (), para modo <strong>retrato</strong> e  <strong>and (orientation: landscape)</strong>  entre parenteses (), para modo <strong>paisagem</strong>
-          </p>
+            <h3>Device Height (Altura do dispositivo):</h3>    
+            <p>
+                <strong>min-device-height:</strong> A altura mínima do dispositivo. <br>
+                <strong>max-device-height:</strong> A altura máxima do dispositivo.
+            </p>
+
+            <h3>Orientation (Orientação):</h3>   
+            <p>
+                <strong>orientation: portrait:</strong> Retrato (altura maior que a largura). <br>
+                <strong>orientation: landscape: </strong>Paisagem (largura maior que a altura).
+                
+            </p>
+            <h3>Resolution (Resolução):</h3>
+            <p>
+                <strong>min-resolution:</strong> A resolução mínima da tela ou dispositivo. <br>
+                <strong>max-resolution:</strong> A resolução máxima da tela ou dispositivo.
+            </p>
+        </section>
+        <section>
+    
+            <p>Dito de Maneira simples os <strong>media features</strong> fazem um ajuste fino nas propriedades dos media queries. Observe o código fonte na área da cabeça para notar a aplicação destas propriedades.</p>
+            <p> Perceba que para a aplicação de media features, adicionamos a propriedade <strong>and (orientation: portrait)</strong> entre parenteses (), para modo <strong>retrato</strong> e  <strong>and (orientation: landscape)</strong>  entre parenteses (), para modo <strong>paisagem</strong>. Para perceber a aplicação deste media query ajuste o tamanho da janela do navegador ou abra esta página em dispositivos comtamenhos de telas diferentes. Você vai notar que em cada tipo de tela haverá um estilo diferente para o conteudo.</p>
+
+            <h2>Imagens com Media Features</h2>
+
+            <p> As imagens são elementos muito comuns na maioria das paginas web, por isso o uso de media queries facilita tornar a imagem adptável aos vários tipos de dispositivos disponíveis atualmente. Na página 4 teremos um exemplo em que conseguiremos notar a aplicação de um media query com uma imagem. Perceba como ela se ajusta de acordo com o tamanho da tela. Se estiver em um dispositivo móvel experimente mudar a orientação do dispositivo.</p> 
         </section>
     </main>
     <footer>

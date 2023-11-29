@@ -1,0 +1,78 @@
+@charset "UTF-8";
+/* Todas as demais mídias*/
+
+@media print {
+
+    body { background-image: url(../imagens/back-print.jpg); /*Desnecessário */
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        margin-bottom: 10px;
+        
+    }
+    main::after {
+        content: 'Página Impressa do exercício de "Tipical Device Breakpoints" do Módulo 4 do Curso de HTML5 E CSS3, feito por Adriano Silva ';
+        text-decoration: overline;
+    }
+
+
+    #smartphone { display: none;}
+    #tablet { display:nonek;}
+    #pc { display: none;}
+    #tv { display: none;}
+    #impressora { display: block;}
+
+    main {
+        border: 2px solid black;
+        
+    }
+
+    main > h1 {
+        text-shadow: none;
+        color: black;
+        
+    }
+
+    
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px ) {
+    body {
+        background-image: url(../imagens/back-tablet.jpg);
+    }
+    #smartphone { display: none;}
+    #tablet { display:block;}
+    #pc { display: none;}
+    #tv { display: none;}
+    #impressora { display: none;}
+
+  
+    
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px ) {
+    
+    body {
+        background-image: url(../imagens/back-pc.jpg);
+    }
+
+    #smartphone { display: none;}
+    #tablet { display:none;}
+    #pc { display: block;}
+    #tv { display: none;}
+    #impressora { display: none;}
+
+}
+@media screen and (min-width: 1200px) {
+
+    body {
+        background-image: url(../imagens/back-tv.jpg);
+    }  #smartphone { display: none;}
+    #tablet { display:none;}
+    #pc { display: none;}
+    #tv { display:block;}
+    #impressora { display: none;}
+
+
+    
+}
+

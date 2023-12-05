@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+/* Versão Mobile */
+* {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0px;
+    padding: 0px;
+    font-size: 1.3em;
+    box-sizing: border-box;
+}
